@@ -12,7 +12,7 @@ end
 
 desc 'Build and deploy'
 task :deploy => :build do
-  sh 'rsync -azh --progress --stats --delete _site/ kylemanna@yangon.dreamhost.com:blog.kylemanna.com'
+  sh 'rsync -azh --progress --stats --delete _site/ kylemanna@blog.kylemanna.com:blog.kylemanna.com'
   sh 'git push git@github.com:kylemanna/kylemanna.github.com.git master'
 end
 
