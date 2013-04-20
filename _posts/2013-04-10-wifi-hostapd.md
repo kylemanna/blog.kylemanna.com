@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "My WiFi access point revisited"
+title: "My Wi-Fi access point revisited"
 tagline: "RIP Linksys and Ubiquiti"
-category: 
-tags: []
+category: Linux
+tags: [linux, networking, wifi, ath9k, core]
 ---
 {% include JB/setup %}
 
@@ -11,16 +11,16 @@ tags: []
 No more consumer routers!
 -------------------------
 
-A while ago I dumped my consumer NAT router in favor of using my desktop router.  I do most of my work at my apartment on my desktop, so why not make it my router and file server?  Great question, great choice.  No longer am I restricted by buggy firmware, half implemented DHCP or DNS servers etc.  I then demoted by Linksys WRT54G running DD-WRT to just AP roles which lasted for a few more years before the hardware finally died.  RIP WRT54G, you outlived your useful life and delivered above and beyond my expectations.
+A while ago I dumped my consumer NAT router in favor of using my desktop router.  I do most of my work at my apartment on my desktop, so why not make it my router and file server?  Great question, great choice.  No longer am I restricted by buggy firmware, half implemented DHCP or DNS servers, NAT limitations, etc.  I demoted by Linksys WRT54G running DD-WRT to just AP roles which lasted for a few more years before the hardware finally died.  RIP WRT54G, you outlived your useful life while delivering above and beyond my expectations.
 
-My Linux desktop / server with an additional Intel NIC and Linux NAT capabilities makes a pretty awesome combination.  Add dnsmasq for simple DHCP, DNS and sometimes TFTP capabilities.  No more consumer routers, last thing I need is more stuff to configure.
+My Linux desktop / server with an additional Intel PCIe NIC and Linux NAT capabilities make a pretty awesome combination.  Add dnsmasq for simple DHCP, DNS and sometimes TFTP capabilities.  No more consumer routers, the last thing I need is more stuff to configure.
 
 Enter the Ubiquiti PicoStation2
 -------------------------------
 
 I read alot of good things about Ubiquiti a while ago when I was planning to build a quad copter and do cool things with Linux + Pandaboard.  The Picostation2 was supposed to be the high powered radio to control the who thing.  Life happened.  The quad never got built, but I didn't give up until after I bought a few pieces such as the Picostation2.  After my Linksys WRT54G died, the Picostation2 was put into action.  I was impressed by the polish of the AirOS web interface.  The Linux SDK seemed cool (until I learned how /old/ the kernel actually was).  But, all my devices (Mac Book Retina Pro, Nexus 4, Lenovo Thinkpad, etc) all had issues with the AP just not working that well.  The connection would just die.  I attempted to reconfigure it and fix it thinking it was my fault, but my attempts were in vain.
 
-A work project demanded WiFi access for some testing at home and the PicoStation2 was making this more difficult.  The PictionStation2 was then retired back to the drawer.
+A work project demanded Wi-Fi access for some testing at home and the PicoStation2 was making this more difficult.  The PictionStation2 was then retired back to the drawer.
 
 Linksys EA6400
 --------------
