@@ -5,6 +5,7 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
+safe: true
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -26,7 +27,7 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://kylemanna.github.com
+production_url : http://blog.kylemanna.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -99,7 +100,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-15644081-3'
     getclicky :
       site_id : 
     mixpanel :
