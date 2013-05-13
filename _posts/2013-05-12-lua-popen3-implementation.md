@@ -26,9 +26,9 @@ Not surprisingly, lua has a simple implementation of the [POSIX popen](http://ww
 Lua extensions or luarocks?
 ---------------------------
 
-Maybe I can find something from the Lua extension site: [luarocks](http://luarocks.org/).  Yes! In fact I can, it's called [Lua Process Call (lpc)](https://github.com/LuaDist/lpc).  I played with this on Lua 5.1 and it works, stdin, stdout, and stderr just worked.  So I should be happy right? No...
+Maybe I can find something from the Lua extension site: [luarocks](http://luarocks.org/)?  Yes! In fact I can, it's called [Lua Process Call (lpc)](https://github.com/LuaDist/lpc).  I played with this on Lua 5.1 and it works, stdin, stdout, and stderr just worked.  So I should be happy right? No...
 
-The luarocks package on Ubuntu 13.04 was built against Lua 5.1, and after running <code>luarocks install lpc</code> I have a shared object that only works with Lua 5.1.  Sigh, imapfilter uses Lua 5.2.  I started re-building luarocks with Lua 5.2 support, and got that working after a while.  Then I ran in to problems building lpc against Lua 5.2 as a number of ABI changes breaks it.  At this point I could start learning alot more Lua then I car to learn, fork the github repo and fix... but that's way to painful.  Perhaps there is a better way.
+The luarocks package on Ubuntu 13.04 was built against Lua 5.1, and after running <code>luarocks install lpc</code> I have a shared object that only works with Lua 5.1.  Sigh, imapfilter uses Lua 5.2.  I started re-building luarocks with Lua 5.2 support, and got that working after a while.  Then I ran in to problems building lpc against Lua 5.2 as a number of ABI changes breaks it.  At this point I could start learning alot more Lua then I care to learn, fork the github repo and fix... but that's way to painful.  Perhaps there is a better way.
 
 Native Lua Implementation?
 --------------------------
