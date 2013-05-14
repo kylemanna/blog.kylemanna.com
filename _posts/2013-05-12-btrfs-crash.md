@@ -35,7 +35,15 @@ More info on the filesystem:
 	Btrfs v0.20-rc1
 
 
-Kmesg Log
----------
+Update - 2013/05/13
+-------------------
+
+About 12 hours later my system hung with a completely different error related to dm-cache not being able to commit metadata.  Coincidentally the metadata is stored on the same drive.  The system was completely unusable and my only option was a hard reboot.  Upon reboot grub tripped complaining that it couldn't find the drive.  I rebooted again, this time paying attention to the BIOS POST screens and noting the absence of my SSD.  I then powered the board off and checked the connectors and all was well again.
+
+All things considered, this is probably due to the SSD connector being lose or the SSD approaching failure.  Looks like I'll need to backup my rootfs in a more complete manner to brace for the potential failure.  I'm also going to keep my eyes open for a good SSD on [slickdeals.net](http://www.slickdeals.net).
+
+
+Original Kmesg Log
+------------------
 
 <script src="https://gist.github.com/kylemanna/5565930.js"></script>
