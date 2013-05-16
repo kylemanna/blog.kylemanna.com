@@ -101,6 +101,7 @@ JB :
     provider : google 
     google : 
         tracking_id : 'UA-15644081-3'
+        domain : 'kylemanna.com'
     getclicky :
       site_id : 
     mixpanel :
