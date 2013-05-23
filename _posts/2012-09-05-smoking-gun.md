@@ -3,7 +3,7 @@ layout: post
 title: "The smoking gun"
 tagline: "... with a hole in it"
 published: true
-category: Cars
+category: cars
 tags: [corvette, cars]
 ---
 {% include JB/setup %}

@@ -3,7 +3,7 @@ layout: post
 title: "A story about a car..."
 tagline: "all great stories start out simple"
 published: true
-category: Cars
+category: cars
 tags: [corvette, cars]
 ---
 {% include JB/setup %}
