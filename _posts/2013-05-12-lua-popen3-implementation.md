@@ -35,11 +35,11 @@ Native Lua Implementation?
 
 I started looking closer at the [Lua POSIX module](https://github.com/luaposix/luaposix) included with Ubuntu (package name lua-posix) and realized there isn't any reason I can't just implement it in native Lua leveraging the POSIX module.  With a little bit of work, and learning more Lua I did just that.  Example code is on Github and will hopefully help others:
 
-<script src="https://gist.github.com/kylemanna/5564520.js"></script>
+* [lua-popen3](https://github.com/kylemanna/lua-popen3)
 
 This implementation provides access to stdin, stdout, and stderr.  Additionally it cleans-up its zombie processes with wait() and returns the status code of the forked process.  What more could you want?  I can't think of much missing from this.  If there are any people with more Lua-foo that I have (which is next to none... or should I say nil?), please feel free to comment on ways to improve this.
 
-Additionally a simple wrapper provides a clean and easy way to access simple commands <code>pipe_simple()</code> while still allowing users to access <code>popen3()</code> to handle the pipes as needed.
+Additionally a simple wrapper provides a clean and easy way to access simple commands <code>pipe_multi()</code> while still allowing users to access <code>popen3()</code> to handle the pipes as needed.
 
 Next Steps
 ----------
