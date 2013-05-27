@@ -27,7 +27,7 @@ Enter IMAP Filter
 
 I scoured the web and found some other people attempting to do similar things, but nothing that really made sense.  All I want is a daemon that would connect to my IMAP server, watch for new messages, run the messages through spamassassin, and put it in my Inbox or in the SPAM folder.
 
-I stumbled on [imapfilter](https://github.com/lefcha/imapfilter).  The goal of imapfilter is to securely connects to remote IMAP server, and move messages around by detecting properties of the message.  It almost does exactly what I want, with one big exception: it doesn't [directly] have support for filtering a remote message through an external program such as spamassassin.
+I stumbled on [imapfilter](https://github.com/lefcha/imapfilter).  The goal of imapfilter is to securely connects to remote IMAP server, and move messages around by detecting properties of the message.  It almost does exactly what I want, with one big exception: it doesn't (directly) have support for filtering a remote message through an external program such as spamassassin.
 
 Fortunately, the developer of imapfilter is using Lua for all the actual scripting to move messages rather then re-inventing the wheel with a proprietary format.  With a little bit of work I figured I could learn enough Lua to fetch a message, run it through spamassassin, check the X-Spam-Status header in the returned message and put it in the appropriate folder.
 
