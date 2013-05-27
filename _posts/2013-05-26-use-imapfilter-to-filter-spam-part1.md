@@ -11,7 +11,7 @@ tags: [spam, spamassassin, imapfilter, imap]
 Use Case
 --------
 
-I use IMAP4 for work and for my personal email, and so does the better part of the world that isn't using either MS Exchange or some website.  I get a lot of SPAM (who doesn't?) and I don't want to.  My webhost's (Dreamhost) SPAM filtering service misses often and I get SPAM in my inbox regularly.
+I use IMAP4 for work and for my personal email, and so does the better part of the world that isn't using either MS Exchange or some website.  I get a lot of SPAM (who doesn't?) and I don't want to.  My webhost's ([Dreamhost](http://www.dreamhost.com/r.cgi?685097)) SPAM filtering service doesn't work well and I get SPAM in my inbox regularly.
 
 I have no longer have a desire to run my own mail server on my co-located server or VPS, I don't want the hassle.  For a long time I've been running Thunderbird almost 24/7 on my workstation to sort my junk mail, but it typically lags behind my Android phone.  Typically I'll get an alert about new email, and there will be a race condition between checking the message and my workstation moving the SPAM message to my Junk folder.  I'd prefer my Android phone never saw the message.
 
