@@ -37,6 +37,19 @@ It may be necessary to remount the /system file system as read-write as it's nor
 
 That's it, https server &lt;-&gt; client traffic can now be easily debugged, modified, and recorded.
 
+Why old hash?
+-------------
+
+OpenSSL prior to version 1.0 used md5 for the filename hashing algorithms (.0 is appended for hash collisions). After version 1.0 OpenSSL switched to sha1 for the filename hashing algorithm.  At some point I suspect (hope) Android will
+update to the newer hashing convention.  Developers can check what their implementation uses by digging through the Android core code.  For Ice Cream Sandwich, the hashing algorithm is defined in <code>
+libcore/luni/src/main/java/org/apache/harmony/xnet/provider/jsse/TrustedCertificateStore.java</code>:
+
+	private String hash(X500Principal name) {
+		int hash = NativeCrypto.X509_NAME_hash_old(name);
+		return IntegralToString.intToHexString(hash, false, 8);
+	}
+
+
 Mac OS X
 --------
 
