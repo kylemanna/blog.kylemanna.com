@@ -119,6 +119,22 @@ After all the bugs are worked out with the wrapper, GNOME session can autostart 
 I'm not sure if the autostart desktop file allow variables like <code>$HOME</code> or shell expansions like <code>~</code>.  I specified the absolute path, so make sure you replace <code>&lt;user&gt;</code> on the Exec line.
 
 
+Spamassassin Tweaks
+-------------------
+
+* Spamassassin needs at least 200 ham and 200 spam messages to enable Bayesian filtering.  Place 200+ spam messages in the False Negatives folder and 200+ ham messages in the False Positives folder and imapfilter will do the rest.
+* I had to setup non-forwarding DNS entries for [uribl.com](http://www.uribl.com/about.shtml) and [list.dnswl.org](http://www.dnswl.org/) for the "free for mot" providers. This is due to the standard caching DNS servers I'm using making too many requests and becoming blocked.  To fix this query the server directly using your own IP rather then through an ISP caching DNS server. See [uribl's about](http://www.uribl.com/about.shtml) for more details. Using dnsmasq on my gateway router this is as simple as creating a /etc/dnsmasq.d/resolv file with:
+
+	# Our upstream server typically gets banned due to excessive queries
+	# for spamassassing blacklists, so query this directly
+	server=/uribl.com/54.241.14.156
+
+	#
+	# g.ns.dnswl.org.
+	server=/list.dnswl.org/38.229.76.4
+
+* I lowered my required score from 5.0 to 4.2 in <code>~/.spamassassin/user_prefs</code> to allow Bayesian filtering with 99% probability to tip the required score scale.  After 1 week+ and several hundred messages it hasn't delivered a false positive.
+
 Other Things?
 -------------
 
