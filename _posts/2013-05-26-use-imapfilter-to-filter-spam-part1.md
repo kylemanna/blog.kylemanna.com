@@ -64,4 +64,4 @@ Goals
 Stay Tuned
 ----------
 
-Stay tuned for a full how-to in part 2.
+The [part 2 howto](/linux/2013/06/09/use-imapfilter-to-filter-spam-part2) is up!
