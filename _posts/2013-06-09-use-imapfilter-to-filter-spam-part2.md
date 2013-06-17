@@ -7,6 +7,12 @@ tags: [spam, spamassassin, imapfilter, imap]
 ---
 {% include JB/setup %}
 
+Update 2013.06.17
+-----------------
+
+The python wrapper to fork and restart imapfilter is no longer necessary with [upstart](/linux/2013/06/16/leveraging-upstart-for-user-jobs) configured properly.  See updates below.
+
+
 Issues with imapfilter
 ----------------------
 
@@ -19,8 +25,7 @@ Prerequisites
 -------------
 
 * Spamassassin's spamd is setup and working.  Using spamc for mail filtering is significantly faster then invoking the standalone spamassassin client.  Users are welcome to attempt to replace <code>spamc</code> with <code>spamassassin</code>, in most cases it should work, but I haven't tested it.
-* A Linux distribution with [GNOME Key Ring](/security/2013/05/13/gnome-keyring-access-for-python) setup and working on user login.  Additionally the DBUS session needs to be exported so that other processes can use it.  I added the following to the end of my <code>.bashrc</code>:
-
+* A Linux distribution with [GNOME Key Ring](/security/2013/05/13/gnome-keyring-access-for-python) setup and working on user login.  <s>Additionally the DBUS session needs to be exported so that other processes can use it.  I added the following to the end of my <code>.bashrc</code>:</s>  Ignore the following, instead use upstart as described [here](/linux/2013/06/16/leveraging-upstart-for-user-jobs).  Original clumsy code follows for historical completeness only:
 
       DBUS_SESSION=$HOME/.dbus-session
       if [ "$DISPLAY" = ":0.0" -a -n "$DBUS_SESSION_BUS_ADDRESS" ]; then
@@ -37,9 +42,9 @@ Expected Operation
 
 The whole thing should happen approximately like this:
 
-1. The python wrapper.py script is run.
-2. Python daemonize itself and the parent returns immediately.
-3. The python child directly calls imapfilter.
+1. <s>The python wrapper.py script is run.</s> Update: An [upstart job](/linux/2013/06/16/leveraging-upstart-for-user-jobs) starts imapfilter.
+2. <s>Python daemonize itself and the parent returns immediately.</s>
+3. <s>The python child directly calls imapfilter.</s>
 4. Imapfilter starts up, starts executing the code in config.lua.
 5. Config.lua tells python to invoke wrapper.py for access to the key ring.
 6. Wrapper.py talks to GNOME key ring over DBUS for the user name and password.
@@ -58,7 +63,7 @@ The whole thing should happen approximately like this:
     4. Check the "*Spam/False Positives*" folder for messages and feed them sa-learn for Bayesian HAM learning.
     5. Check the "*Spam/False Negatives*" folder for messages and feed them sa-learn for Bayesian SPAM learning.
 
-9. When imapfilter exits due to a server error, the python wrapper waits 30 seconds and starts it again.  Back to step 4.
+9. When imapfilter exits due to a server error, <s>the python wrapper waits 30 seconds and</s> upstart starts it again.  Back to step 4.
 
 
 Setting up imapfilter
@@ -95,7 +100,9 @@ Setting up imapfilter
 Test It
 -------
 
-Running <code>~/.imapfilter/wrapper.py</code> should launch the python script.  The python script will fork itself and then launch imapfilter.  Watch <code>~/.imapfilter/imapfilter.log</code> for errors.  At first there may be server or authentication issues, so be ready for them.
+Run <code>imapfilter -v</code> to launch imapfilter and see if the configuration is working.
+
+<s>Running <code>~/.imapfilter/wrapper.py</code> should launch the python script.  The python script will fork itself and then launch imapfilter.  Watch <code>~/.imapfilter/imapfilter.log</code> for errors.</s>  At first there may be server or authentication issues, so be ready for them.
 
 Fix the problem.  No telling what could go wrong.
 
@@ -103,7 +110,12 @@ Fix the problem.  No telling what could go wrong.
 Autostart
 ---------
 
+
+Use [upstart user sessions](/linux/2013/06/16/leveraging-upstart-for-user-jobs) to autostart imapfilter everytime the user logins to their desktop.
+
+<s>
 After all the bugs are worked out with the wrapper, GNOME session can autostart the wrapper.  To setup the autostart, create a file under <code>~/.config/autostart/imapfilter.desktop</code> with the following:
+</s>
 
     [Desktop Entry]
     Type=Application
@@ -116,7 +128,9 @@ After all the bugs are worked out with the wrapper, GNOME session can autostart 
     Comment[en_US]=Start up imapfilter
     Comment=Start up imapfilter
 
+<s>
 I'm not sure if the autostart desktop file allow variables like <code>$HOME</code> or shell expansions like <code>~</code>.  I specified the absolute path, so make sure you replace <code>&lt;user&gt;</code> on the Exec line.
+</s>
 
 
 Spamassassin Tweaks
@@ -133,6 +147,7 @@ Spamassassin Tweaks
       server=/list.dnswl.org/38.229.76.4
 
 * I lowered my required score from 5.0 to 4.2 in <code>~/.spamassassin/user_prefs</code> to allow Bayesian filtering with 99% probability to tip the required score scale.  After 1 week+ and several hundred messages it hasn't delivered a false positive.
+
 
 Other Things?
 -------------
