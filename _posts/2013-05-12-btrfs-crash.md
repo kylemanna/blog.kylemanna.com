@@ -3,7 +3,7 @@ layout: post
 title: "Btrfs filesystem trips up"
 tagline: "... again?"
 category: linux
-tags: [linux, kernel, btrfs, crash, bug]
+tags: [linux, kernel, btrfs, crash, bug, dm-cache]
 ---
 {% include JB/setup %}
 

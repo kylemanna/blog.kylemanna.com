@@ -3,7 +3,7 @@ layout: post
 title: "SSD Caching Using dm-cache Tutorial"
 tagline: "big and fast"
 category: linux
-tags: [dm-cache, ssd, linux, dmsetup, device-mapper, howto, tutorial, performance]
+tags: [cache, dm-cache, ssd, linux, dmsetup, device-mapper, howto, tutorial, performance, server, disk]
 ---
 {% include JB/setup %}
 
