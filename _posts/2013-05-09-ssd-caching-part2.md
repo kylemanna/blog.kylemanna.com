@@ -28,3 +28,8 @@ Update with bcache
 Apparently bcache has been merged in v3.10 kernel (via [Phoronix](http://www.phoronix.com/scan.php?page=news_item&px=MTM2ODM)).  After reviewing the kernel documentation, it appears that it is quite a bit more configurable and doesn't use device-mapper.  This means you can't just add the cache to an existing device-mapper device, instead you create a new block device.  I assume this trades the flexibility of adding/removing caches without re-creating file systems with performance.
 
 Time will tell, maybe I'll give it a shot when 3.10 is released. Or maybe I'll stick with dm-cache in favor of simplicity for my generic work load.
+
+Update
+------
+
+* 2013/07/01 - I wrote-up a quick [dm-cache tutorial](/linux/2013/06/30/ssd-caching-using-dmcache-tutorial/)
