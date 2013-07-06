@@ -7,12 +7,17 @@ tags: [cache, dm-cache, ssd, linux, dmsetup, device-mapper, howto, tutorial, per
 ---
 {% include JB/setup %}
 
+What's dm-cache
+---------------
+
+Dm-cache is a device-mapper level solution for caching blocks of data from mechanical hard drives to solid state SSDs.  The goal is to significantly speed up throughput and latency to frequently accessed files.
+
 What's About to Happen
 ----------------------
 
 This tutorial is going to cover the basic steps to setup dm-cache on a Ubuntu 13.04 machine.  It easily translates to other distributions, but users will need to find a sufficient kernel and modify the init scripts to fit their init system.
 
-One of the nice things about dm-cache is that it doesn't require you to create a new block device to store your file system on, instead it sits on top of either your existing file system or you can create a new file system.  I'm going to assume you already have a file system and you just want to add caching.  If not, creating a file system on a block device is trivial anyways.
+One of the nice things about dm-cache is that it doesn't require you to create a new block device to store your file system on.  Instead dm-cache sits on top of your existing file system or you create a new file system.  I'm going to assume you already have a file system and you just want to add caching.  If not, creating a file system on a block device is trivial.
 
 If you have no clue what I just said, this tutorial definitely isn't for you and you may lose your data.  Your dog will die.  And your house will burn down.  Don't say I didn't warn you.
 
@@ -20,9 +25,9 @@ If you have no clue what I just said, this tutorial definitely isn't for you and
 How I've Been Using dm-cache
 ----------------------------
 
-All of my testing over the past few months has been with test data and my $HOME/.cache folder for my Unity desktop.  This was all data that in the event of disaster, could easily be replaced.  I suggest you do the same until dm-cache earns your trust.
+All of my testing over the past few months has been with test data and my <code>$HOME/.cache</code> folder for my Unity desktop.  All the data on dm-cache volume was data that could easily be replaced in the event of a disaster.  I suggest you do the same until dm-cache earns your trust.  Once I trust dm-cache the plan is to cache my entire /home file system.
 
-My SSD has been slowly dying on me, and to this point it appears that dm-cache has sustained hardware block device failure with a resiliency similar to that of a standard ext4 file system.  See [my old blog post](/linux/2013/05/12/btrfs-crash)
+My SSD has been slowly dying on me, and to this point it appears that dm-cache has sustained hardware block device failure with a resiliency similar to that of a standard ext4 file system.  See [my old blog post](/linux/2013/05/12/btrfs-crash) for aimless babbling on the topic.
 
 Additionally, I have daily backups up all my important data.  Complete backups are done to another hard drive, and off site backups are done using [obnam](http://liw.fi/obnam/).  If you don't have backups and you're playing with this new technology, you're crazy.  Back it up.
 
@@ -49,13 +54,13 @@ Now reboot your system and verify you're now running the new kernel:
 Setup Your Caching SSD Device
 -----------------------------
 
-There are a number of ways to setup your SSD.  Essentially we need to create two sections to store the SSD metadata and cache regions.  There are three ways off the top of my head you can do this:
+There are a number of ways to setup your SSD.  Essentially, we need to create two sections to store the SSD metadata and cache regions.  There are three ways you can do this:
 
 1. Create two traditional partitions
 2. Use device mapper's dm-linear feature to split up a single partition
-3. Use LVM as a front-end to device mapper.
+3. Use LVM as a front-end to device mapper
 
-To keep things simple, I just did #2, it allowed me the most flexibility during my initial testing.  Create a partition on your SSD device for use later in this tutorial.  Ensure no valuable data resides on that partition as it will be erased.
+To keep things simple, I just did #2, it allowed me the most flexibility during my initial testing.  Create a partition on your SSD device for use later in this tutorial with dm-linear.  Ensure no valuable data resides on that partition as it will be lost.
 
 
 Manually Configure the SSD Cache
@@ -64,13 +69,13 @@ Manually Configure the SSD Cache
 Now is the time to assemble the dm-cache device for the first time and see how it works.  Ensure that your original file system is unmounted before proceeding.
 
 
-1. Find the actual size of your SSD used for caching blocks.  According to [this mailing list posting](https://www.redhat.com/archives/dm-devel/2012-December/msg00046.html), the metadata size will be about <code>4 MB + ( 16 bytes + nr_blocks )</code>, where nr_blocks is ths number of blocks on the device volume.  For this tutorial I'm going to use 256 KB (262144 bytes) cache block size.  To keep the math simple, ignore the chunk that is about to be cut out from the metadata from the entire SSD partition allocated for the caching.  To determine the size, use fdisk:
+1. Find the actual size of your SSD used for caching blocks.  According to [this mailing list posting](https://www.redhat.com/archives/dm-devel/2012-December/msg00046.html), the metadata size will be about <code>4 MB + ( 16 bytes + nr_blocks )</code>, where nr_blocks is ths number of blocks on the device volume.  For this tutorial I'm going to use 256 KB (262144 bytes) cache block size.  To keep the math simple, ignore the chunk that is about to be cut out from the metadata from the entire SSD partition allocated for the caching.  Determine the size:
 
        $ sudo blockdev --getsize64 /dev/disk/by-id/scsi-SATA_OCZ-AGILITY2_f2d200034-part6
        96782516224
 
-2. Calculate the ssd-metadata size in bytes: <code>4194304 + (16 * 96782516224/262144) = 10101440</code> 96782516224 is the total size of our ssd cache partition. This is the size of the metadata partition in bytes, convert it to number of sectors: <code>10101440 / 512 = 19729.375</code>, round up to <code>19730</code> to play it safe.
-3. Create the ssd-metadata dm device and zero it out so it isn't misinterpreted by dm-cache (happen to me when re-creating caches):
+2. Calculate the ssd-metadata size in bytes: <code>4194304 + (16 * 96782516224 / 262144) = 10101440</code>, where 96782516224 is the total size of our ssd cache partition. The result is the size of the metadata partition in bytes, convert it to number of sectors: <code>10101440 / 512 = 19729.375</code>, round up to <code>19730</code> to play it safe.
+3. Create the ssd-metadata dm device and zero it out so it isn't misinterpreted by dm-cache (happened to me when re-creating caches):
 
        $ sudo dmsetup create ssd-metadata --table '0 19730 linear /dev/disk/by-id/scsi-SATA_OCZ-AGILITY2_f2d200034-part6 0'
        $ sudo dd if=/dev/zero of=/dev/mapper/ssd-metadata
@@ -92,11 +97,11 @@ Now is the time to assemble the dm-cache device for the first time and see how i
 6. Verify that the device was created and working:
 
        $ ls -l /dev/mapper/home-cached
-       lrwxrwxrwx 1 root root 7 Jun 30 22:20 /dev/mapper/home-cached -> ../dm-5$
+       lrwxrwxrwx 1 root root 7 Jun 30 22:20 /dev/mapper/home-cached -> ../dm-5
        $ sudo dmsetup status /dev/mapper/home-cached
        0 1048576000 cache 1105/65536 144554 179602 336023 1797 0 1 28139 28139 0 2 migration_threshold 2048 4 random_threshold 4 sequential_threshold 512
 
-7. Put it to use, mount it:
+7. Put it to use by mounting it:
 
        $ sudo mkdir /mnt/cache
        $ sudo mount /dev/mapper/home-cached /mnt/cache 
@@ -112,13 +117,13 @@ Ubuntu upstart script to setup the device-mapper devices every time at boot and 
 
 <script src="https://gist.github.com/kylemanna/5899179.js"></script>
 
-Install these files as root under /etc/init.  Upstart will take care of the rest.
+Install these files as root under /etc/init.  Upstart will take care of the rest on next reboot.
 
 
 Actually Using It
 -----------------
 
-I have backed up my old files and then copied them to my ssd-cached file system.  I create symlinks from my more important file systems to this test file system.
+I have backed up my old files and then copied them to my ssd-cached file system.  I create symlinks from my more important file systems to this test file system.  Again, the goal is test it for now.  Later I'll use dm-cache to cache my entire /home file system and won't need symlinks.
 
 
 My <code>$HOME/.cache</code> directory is an excellent test candidate. Things like file browsing (thumbnails and what not) are stored on the ssd-cached file system and are much snappier then before.  Google Chrome stores its caches under <code>$HOME/.cache</code> here too, so cached web browsing is now faster.
@@ -159,6 +164,6 @@ Kernel Documentation
 Future Steps
 ------------
 
-I need to purchase a new SSD, I have my sights set on a Samsung SSD 840 Pro, but am waiting for a good deal.  At that point I can stop worrying about by dying SSD.  At that point I'll then try dm-cache over my entire home file system and see what kind of trouble I can get in to.
+I need to purchase a new SSD, I have my sights set on a Samsung SSD 840 Pro, but I am waiting for a good deal.  At that point I can stop worrying about by dying SSD and then try dm-cache over my entire /home file system and see what kind of trouble I can get in to.
 
 Later I'm going to explore tweaking the cache parameters as right now the policies don't seem to fit my desired use case.  I don't want long sequential operations going straight to the hard drives, I'd rather they go to the SSD until they need to migrated.  Additionally, it'd be nice if there was a continuous ongoing migration of all the dirty data on the SSD to the old hard drives.
