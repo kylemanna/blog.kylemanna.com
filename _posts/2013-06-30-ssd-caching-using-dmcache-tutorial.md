@@ -7,8 +7,8 @@ tags: [cache, dm-cache, ssd, linux, dmsetup, device-mapper, howto, tutorial, per
 ---
 {% include JB/setup %}
 
-What's dm-cache
----------------
+What's dm-cache?
+----------------
 
 Dm-cache is a device-mapper level solution for caching blocks of data from mechanical hard drives to solid state SSDs.  The goal is to significantly speed up throughput and latency to frequently accessed files.
 
