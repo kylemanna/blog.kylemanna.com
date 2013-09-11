@@ -69,7 +69,7 @@ Manually Configure the SSD Cache
 Now is the time to assemble the dm-cache device for the first time and see how it works.  Ensure that your original file system is unmounted before proceeding.
 
 
-1. Find the actual size of your SSD used for caching blocks.  According to [this mailing list posting](https://www.redhat.com/archives/dm-devel/2012-December/msg00046.html), the metadata size will be about <code>4 MB + ( 16 bytes + nr_blocks )</code>, where nr_blocks is ths number of blocks on the device volume.  For this tutorial I'm going to use 256 KB (262144 bytes) cache block size.  To keep the math simple, ignore the chunk that is about to be cut out from the metadata from the entire SSD partition allocated for the caching.  Determine the size:
+1. Find the actual size of your SSD used for caching blocks.  According to [this mailing list posting](https://www.redhat.com/archives/dm-devel/2012-December/msg00046.html), the metadata size will be about <code>4 MB + ( 16 bytes * nr_blocks )</code>, where nr_blocks is ths number of blocks on the device volume.  For this tutorial I'm going to use 256 KB (262144 bytes) cache block size.  To keep the math simple, ignore the chunk that is about to be cut out from the metadata from the entire SSD partition allocated for the caching.  Determine the size:
 
        $ sudo blockdev --getsize64 /dev/disk/by-id/scsi-SATA_OCZ-AGILITY2_f2d200034-part6
        96782516224
