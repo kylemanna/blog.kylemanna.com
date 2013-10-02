@@ -2,7 +2,7 @@ task :default => :server
  
 desc 'Build site with Jekyll'
 task :build do
-  jekyll '--no-auto'
+  jekyll 'build'
 end
  
 desc 'Build and start server with --auto'
