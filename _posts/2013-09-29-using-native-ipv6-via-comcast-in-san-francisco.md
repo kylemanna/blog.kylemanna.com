@@ -14,6 +14,8 @@ IPv6 is the next generation Internet protocol with a *significantly* larger addr
 
 Poking around the Internet is sure to yield some dramatic blog articles on just how much bigger the address space actually is.  Go fish.
 
+[![Speedtest Results](http://stage.results.speedtest.comcast.net/result/319941604.png)](http://ipv6.speedtest.comcast.net/)
+
 My Goals
 ========
 
@@ -207,5 +209,6 @@ Next Steps
 
 * Test your IPv6 firewall: [http://ipv6.chappell-family.com/ipv6tcptest/](http://ipv6.chappell-family.com/ipv6tcptest/)
 * Run an IPv6 speedtest: [http://ipv6.speedtest.comcast.net/](http://ipv6.speedtest.comcast.net/)
+* Comcast Forum Topic about [Home Routing](http://forums.comcast.com/t5/Home-Networking-Router-WiFi/IPv6-prefix-size-and-home-routing/td-p/1495933)
 * Maybe a follow-up post about the IPv6 Privacy Extensions?
 * Comments?
