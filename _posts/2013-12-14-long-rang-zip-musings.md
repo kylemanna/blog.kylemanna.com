@@ -7,7 +7,7 @@ tags: [compression, archive, lrzip, 7z, tar, xz, zpaq]
 ---
 {% include JB/setup %}
 
-I stumbled upon [lrzip](https://github.com/ckolivas/lrzip) and was curious about it's viability as an archive compression tool for my old project files.  Due to the infrequent access, I don't care much about compression/decompression time, but I do care about the size as they are backed-up to the cloud via obnam.  I recorded the compression/decompression times just for my amusement, the system is an i5-2500K with 16 GB of RAM.  Filesize is the ultimate determining factory though hence the reason I chose ZPAQ for the compression algorithm.
+I stumbled upon [lrzip](https://github.com/ckolivas/lrzip) and was curious about it's viability as an archive compression tool for my old project files.  Due to the infrequent access, I don't care much about compression/decompression time, but I do care about the size as they are backed-up to the cloud via obnam.  I recorded the compression/decompression times just for my amusement, the system is an i5-2500K with 16 GB of RAM.  Filesize is the ultimate determining factor and the reason I chose ZPAQ for the compression algorithm.
 
 ## Tests
 
