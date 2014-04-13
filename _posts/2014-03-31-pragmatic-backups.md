@@ -3,7 +3,7 @@ layout: post
 title: "Pragmatic Backups"
 tagline: "in case my apt burns down"
 category: linux
-tags: [ backup, linux, archive, security, sharing. distributed, obnam ]
+tags: [ backup, linux, archive, security, sharing. distributed, obnam, btsync ]
 ---
 {% include JB/setup %}
 
@@ -161,3 +161,5 @@ I **love** the idea of distributed back-ups with anonymous peers, but they all s
 * [MaidSafe](http://maidsafe.net/) - Too early, but [MaidSafe-Drive + Encrypt](https://github.com/maidsafe/MaidSafe-Drive/wiki) sounds perfect! FUSE, encryption, peer to peer, open source.
 * [FreeNet](https://freenetproject.org) - Not really focused on back-up.
 * Others? Let me know!
+
+Then there are other things like [BitTorrent Sync](http://www.bittorrent.com/sync) and by association [Syncthing](http://syncthing.net/).  Unfortunately these services back-up *all* my data to the peers and the data is readable by the other storage nodes, more like a sync app.  I'd like to have the option to only backup small chunks to the storage nodes with data confidentiality.
