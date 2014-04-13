@@ -149,12 +149,15 @@ Evolution
 
 I'd like to find a solution that lets me backup more data in Tier 2 and possibly merge Tier 2 and 3 if I can find a remote solution that would let me cost effectively store that much data.  That's a problem for another day.
 
-I keep looking at and playing with [SpiderOak](https://spideroak.com/download/referral/190e74541014e319ba3dd116976563ba).  I wish I took advantage of their "unlimited" backup promotion, should they offer it again I'll definitely sign-up.  [SpiderOak](https://spideroak.com/download/referral/190e74541014e319ba3dd116976563ba) is very [security concious](https://spideroak.com/zero-knowledge/) and I enjoy following their [blog](https://spideroak.com/blog/).  I've been playing with their free package for a few weeks and think it's "ok".  I'd definitely recommend it to any of my less tech savvy friends as a back-up and DropBox replacement (see [SpiderOak Hive](https://spideroak.com/hive/)).  Use my referral link to get an extra 1 GB by clicking [here](https://spideroak.com/download/referral/190e74541014e319ba3dd116976563ba)
+I keep looking at and playing with [SpiderOak](https://spideroak.com/download/referral/190e74541014e319ba3dd116976563ba).  I wish I took advantage of their "unlimited" backup promotion, should they offer it again I'll definitely sign-up.  [SpiderOak](https://spideroak.com/download/referral/190e74541014e319ba3dd116976563ba) is very [security concious](https://spideroak.com/zero-knowledge/) and I enjoy following their [blog](https://spideroak.com/blog/).  I've been playing with their free package for a few weeks and think it's "ok".  I'd **definitely recommend it to any of my less tech savvy friends as a back-up and DropBox replacement** (see [SpiderOak Hive](https://spideroak.com/hive/)).  **Use my referral link to get an extra 1 GB by clicking [here](https://spideroak.com/download/referral/190e74541014e319ba3dd116976563ba)**.
 
-Or maybe a larger VPS from someone like [Backupsy](http://backupsy.com/)(Uses KVM too ftw, hate OpenVZ).
+Or maybe a larger VPS from someone like [Backupsy](http://backupsy.com/)(Uses KVM too ftw, I hate OpenVZ).  Simplest approach would be to get a huge Backupsy VM and share it with friends for cheap.
 
 I **love** the idea of distributed back-ups with anonymous peers, but they all seem pretty immature and I'm concerned about availability:
+
 * [Tahoe-LAFS](https://tahoe-lafs.org/trac/tahoe-lafs) - the web interface kills it, the ghetto FUSE implmentation and incompataiblity with NAT kill it.  The security and data distribution principals are awesome though.
 * [Symform](http://www.symform.com) - tries to be exactly what I want, but is of terrible quality (back-up software written in Mono!?).  Basically you get 1 GB for ever 2 GB of space you contribute.  I failed to make their lame Linux software ever work.  Enough to scare me away for some time.
 * [SpaceMonkey](https://www.spacemonkey.com/) - would be perfect if I didn't have to use their embedded device, but could just run an app on my file server.  Also afraid it maybe be crude or immature like Symform.
+* [MaidSafe](http://maidsafe.net/) - Too early, but [MaidSafe-Drive + Encrypt](https://github.com/maidsafe/MaidSafe-Drive/wiki) sounds perfect! FUSE, encryption, peer to peer, open source.
+* [FreeNet](https://freenetproject.org) - Not really focused on back-up.
 * Others? Let me know!
