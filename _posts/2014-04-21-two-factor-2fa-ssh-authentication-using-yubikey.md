@@ -13,6 +13,8 @@ The Linux PAM module will use the result to allow access to the machine in addit
 
 A user would use the 2FA (two factor authentication) system by sshing in to a remote machine, typing their password followed immediately by the YubiKey's encrypted message (modhex encoded).  If everything checks out the user is permitted access and the rest of the session continues as normal.
 
+At the same time, if the user elects to use a ssh private key (think automation) the login process is unaffected by the YubiKey.
+
 These are my brief notes on my YubiKey authentication setup on Arch Linux.
 
 Prerequisites
@@ -81,9 +83,24 @@ Documentation
 Security Implications
 =====================
 
+### Compromising the Added Security
+
 The security is at least as strong as the original password, the second factor could be bypassed in the following cases:
 
 * The AES private key of the Yubikey is compromised.  Could be compromised by a very sophisticated via [side-channel attack](http://youtu.be/_c1cx8F4-SM?t=36m30s) or if the key was regenerated or submitted to Yubico insecurely using YubiKey Personalization app.
-* An adversary installs a trusted CA on the target machine and performs a man-in-the-middle attack when the pam_yubico attempts to contact Yubico.
+* An adversary installs a trusted CA on the target machine and performs a man-in-the-middle attack when the pam_yubico modules contacts Yubico.
 * An adversary could modify <code>~/.yubico/authorized_yubikeys</code>.
-* If the PAM files were incorrectly modified all security could be compromised (test!!!).
+* If the PAM files were incorrectly modified all security could be compromised (*test!!!*).
+* Would be locked out of remote ssh access if Yubikey's authentication web service goes down.  Moot point is would also be locked out if the remote machine's Internet connection went down, but that would cause many more problems like... no ssh access period.
+
+### Upsides:
+
+* Bruteforce attack is _significantly_ harder without forcing users to memorize something obnoxious.
+* Can't be keylogged and replayed on a compromised machine due to the embedded counter.
+* Doesn't require the user to expose a private ssh key (where both the key and passphrase could be stolen) when logging in from someone else's insecure machine.
+* Impossible to login to users on the remote machine without configuring <code>~/.yubico/authorized_yubikeys</code>. This prevents the accidental creation of ssh accounts when trying to create a simple user account.
+
+### Annoyances:
+
+* Now very difficult to login on a cell phone, but could be worked around with a dedicated ssh private key.
+* The user can't lose the YubiKey and the (hopefully) installed ssh private keys at the same time or the user will be locked out.
