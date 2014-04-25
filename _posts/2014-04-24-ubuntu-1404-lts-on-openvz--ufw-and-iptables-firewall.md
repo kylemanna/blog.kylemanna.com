@@ -7,7 +7,7 @@ tags: [linux, vps, openvz, ufw, iptables]
 ---
 {% include JB/setup %}
 
-I upgraded my P.O.S. OpenVZ VPS (KVM from now on...) from Ubuntu 12.04.4 LTS to 14.04 LTS today and ran in to some problems with the firewall rules.  Everytime I'd reboot the VPS, it would to setup all the firewall rules setup by ufw, most notably the application allow rules (ie ssh) and the INPUT chain policy.  Kind of dangerous.
+I upgraded my P.O.S. OpenVZ VPS (KVM from now on...) from Ubuntu 12.04.4 LTS to 14.04 LTS today and ran in to some problems with the firewall rules.  Every time I'd reboot the VPS, it would to setup all the firewall rules setup by ufw, most notably the application allow rules (ie ssh) and the INPUT chain policy.  Kind of dangerous.
 
 # Debugging
 
@@ -18,7 +18,7 @@ Running <code>/lib/ufw/ufw-init force-reload</code> manually returns:
 
 # Fixing
 
-Some digging revealed that this is the result of a semantics change in the iptables rules broke <code>/lib/ufw/ufw-init-functions</code>.  Around line 263 the culprit can be found.  The two changes: <code>-m conntrack --ctstate</code> -&gt; <code>-m state --state</code>.  The following works for me now until the next update clobbers it:
+Some digging revealed that this is the result of a semantics change in the iptables rules broke <code>/lib/ufw/ufw-init-functions</code>.  Around line 263 the culprit can be found and resolved by changing <code>-m conntrack --ctstate</code> to <code>-m state --state</code>.  The following snippet works for me now until the next ufw update clobbers it:
 
 				# add tracking policy
 				if [ "$DEFAULT_INPUT_POLICY" = "ACCEPT" ]; then
