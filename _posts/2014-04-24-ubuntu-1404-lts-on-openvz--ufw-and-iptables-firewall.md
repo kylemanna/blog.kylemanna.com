@@ -2,8 +2,8 @@
 layout: post
 title: "Ubuntu 14.04 LTS on OpenVZ + ufw and iptables Firewall"
 tagline: "ufw drama"
-category: 
-tags: []
+category: linux
+tags: [linux, vps, openvz, ufw, iptables]
 ---
 {% include JB/setup %}
 
