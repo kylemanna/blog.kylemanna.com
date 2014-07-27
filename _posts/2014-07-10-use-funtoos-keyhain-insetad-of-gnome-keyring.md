@@ -9,9 +9,9 @@ tags: [linux, ssh, ssh-agent, keys, keyring, arch]
 
 ## Why Disable GNOME Keyring?
 
-Quite simply, GNOME Keyring still doesn't have have support for `ed25519` keys and I want to use it.
+Quite simply, GNOME Keyring still doesn't have have support for `ed25519` keys that I want to use it.
 
-Also, I'm a bit paranoid and don't want things to help manage my keys without being explicity.  I don't trust GNOME keyring to not try and help me and cache some passphrase behind my back unless I'm really careful.
+Also, I'm a bit paranoid and don't want things to *help* manage my keys without being explicit.  I don't trust GNOME keyring to not try and help me and cache some passphrase behind my back unless I'm really careful.  Furthermore, it may get updated in the future to me more *user friendly*.
 
 ## What Starts GNOME Keyring?
 
