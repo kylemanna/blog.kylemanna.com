@@ -7,6 +7,15 @@ tags: [cache, dm-cache, ssd, linux, dmsetup, device-mapper, howto, tutorial, per
 ---
 {% include JB/setup %}
 
+## Update - 2014 July
+
+Many of the following steps in this post are **no longer required or recommended**.  Consider it more of a behind the scenes guide for dm-cache from the early days. :)
+
+* Modern distros have kernel support for dm-cache out of the box, so don't worry about updating the kernel.
+* The latest lvm2 tools have support for `lvmcache` which is a front-end to dm-cache and is *much* easier to use.  At the time of this update, it appears that only Fedora (and derivatives) have support.  [Arch Linux bug 40754](https://bugs.archlinux.org/task/40754) and [the 41291 dupe I reported](https://bugs.archlinux.org/task/41291) will track the *currently* missing feature in Arch Linux.
+* For more documentation on `lvmcache` consider `man lvmcache` if your lvm2 package is up to date and has cache support.  Also consider [Richard Jones' LVM Cache blog post](http://rwmj.wordpress.com/2014/05/22/using-lvms-new-cache-feature/) for a guide that approximates the man page.
+* I've played with `lvmcache` and like it, if I have time I'll write-up a blog post regarding performance.  For reference, running `git grep blah` on a recent kernel tree takes 25-30 seconds on traditional HDD, 2 seconds on a SSD and 4 seconds on the same HDD + SSD + dm-cache with a warm cache.  A good compromise.
+
 What's dm-cache?
 ----------------
 
