@@ -39,6 +39,7 @@ Create the systemd unit file @ <code>/etc/systemd/system/phone-home.service</cod
     [Unit]
     Description=Phone Home Reverse SSH Service
     ConditionPathExists=|/usr/bin
+    After=network.target
 
     [Service]
     User=localuser
