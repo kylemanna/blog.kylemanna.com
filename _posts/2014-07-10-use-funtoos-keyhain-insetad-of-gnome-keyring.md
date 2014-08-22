@@ -33,21 +33,23 @@ I first started using it back in my Gentoo days and abandoned it to give GNOME K
 
 1. Install `keychain`:
 
-        pacman -S keychain
+    pacman -S keychain
 
 2. Disable GNOME Keyring's laggy GPG and SSH agent implementations, you'll need to exit your running X session for these to happen. Luckily `keychain` takes care of all the agent management for us.
 
-        cat << EOF > ~/.config/autostart/gnome-keyring-ssh.desktop
-        [Desktop Entry]
-        Type=Application
-        Name=SSH Key Agent (keychain)
-        Exec=keychain --quiet --agents ssh
+    cat << EOF > ~/.config/autostart/gnome-keyring-ssh.desktop
+    [Desktop Entry]
+    Type=Application
+    Name=SSH Key Agent (keychain)
+    Exec=keychain --quiet --agents ssh
+    EOF
 
-        cat << EOF > ~/.config/autostart/gnome-keyring-gpg.desktop
-        [Desktop Entry]
-        Type=Application
-        Name=GPG Key Agent (keychain)
-        Exec=keychain --quiet --agents gpg
+    cat << EOF > ~/.config/autostart/gnome-keyring-gpg.desktop
+    [Desktop Entry]
+    Type=Application
+    Name=GPG Key Agent (keychain)
+    Exec=keychain --quiet --agents gpg
+    EOF
 
 3. Tell your shell to pick-up the `keychain` managed environment by adding `eval $(keychain --eval --quiet)` to your `.bashrc` or appropriate.
 
