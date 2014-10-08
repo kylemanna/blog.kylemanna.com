@@ -214,3 +214,18 @@ Finally, I tried [Mailjet](https://www.mailjet.com/).  Their website seems more 
 ## Final Solution?
 
 Once DigitalOcean adds IPv6 support to their SFO data center, I'll move my mail server there (into a CoreOS service) and get rid of my dependence on ChicagoVPS.  At that point, I'll no longer be blacklisted and could then decide if I want to keep or drop Mailjet.  If it continues to work flawlessly, I might as well keep it.
+
+
+## Update 2014.10.08
+
+I soon realized that Mailjet requires me to verify *every* sending domain.  All of my servers that send cron emails need to be individually verified for *every* hostname.  Sigh.  I don't want to rewrite or forge the sender address (spammers would forge the header, so this policy is ridiculous anyways...), I'd rather see cron emails from user@hostname.full.tld.  I went through the process of activating my Mailgun account and using and that seems better for the moment.  I wish they would have cleaned-up the mail headers that leak too much data though... but it works the best so far.
+
+In other news, ColoCrossing finally was removed from the blacklist.  I received this nice little email from MxToolbox informing me:
+
+[![MxToolbox email screenshot](http://i.imgur.com/Lu4xTe5l.png)](http://imgur.com/Lu4xTe5)
+
+64 days later.
+
+I'll stick with Mailgun for now.  Hopefully Mandrill will fix their stuff as their service seemed better overall (multiple SMTP logins so each server could connect directly to their endpoints without sharing credentials).
+
+In other news, I bet ChicagoVPS will never close my ticket eventhough the issue is (temporarily?) resolved.
