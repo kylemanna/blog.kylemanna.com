@@ -68,7 +68,7 @@ Furthermore, the remaining portion of the disk can be used for anything.  I've h
        sudo grub-install --target=x86_64-efi --boot-directory=$USB/boot --efi-directory=$USB --removable --recheck $DEV
 
 
-5. Create a basic GRUB configuration file, modify path to ISO as appropriate, add more menuentries if desired.
+5. Create a basic GRUB configuration file, modify path to ISO as appropriate, add more menuentries if desired.  Becareful your shell doesn't replace `$iso`.
 
        cat <<EOF | sudo tee $USB/boot/grub/grub.cfg
        set timeout=10
@@ -76,8 +76,8 @@ Furthermore, the remaining portion of the disk can be used for anything.  I've h
 
        menuentry "Ubuntu 14.04.1 Live ISO" {
           set iso="/iso/ubuntu-14.04.1-desktop-amd64.iso"
-          loopback loop $iso
-          linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=$iso splash
+          loopback loop \$iso
+          linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=\$iso splash
           initrd (loop)/casper/initrd.lz
        }
        EOF
@@ -96,6 +96,10 @@ Furthermore, the remaining portion of the disk can be used for anything.  I've h
     * GPG tools and signatures for authenticity verification
     * Memory tester ISOs
     * Additional Linux distributions
+    * Software to run offline code wallet storage like Bitcoin Armory for cold wallets
+    * Backup software or recovery tools
+
+I'd recommend all auxiliary software be stored on a LUKS secured partition to avoid concern of tampering (i.e. backdoored Bitcoin wallet software).
 
 ## Testing
 
