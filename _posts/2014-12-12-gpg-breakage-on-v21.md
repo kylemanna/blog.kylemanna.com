@@ -26,8 +26,8 @@ Man page:
        --use-standard-socket
 
        --no-use-standard-socket
-              Since  GnuPG  2.1  the  standard  socket  is  always used.  These options have no more
-              effect.
+             Since  GnuPG  2.1  the  standard  socket  is  always used.  These options have no more
+             effect.
 
 
 ## The Fix
@@ -42,43 +42,43 @@ Use `allow-preset-passphrase` to cache my backup encryption key passphrase.  I'l
 
 1. Launch `gpg-agent` manually using [systemd unit file](https://github.com/kylemanna/systemd-utils/blob/master/units/gpg-agent.service) (Gotta love systemd on Arch) so that our custom arguments take affect.  If GnuPG autostarts itself, I'll miss these two critical arguments and it doesn't appear that I can store them in a config file:
 
-        [Unit]
-        Description=GPG private key agent
-        IgnoreOnIsolate=true
+       [Unit]
+       Description=GPG private key agent
+       IgnoreOnIsolate=true
 
-        [Service]
-        Type=forking
-        # Start GPG manually so that precise arguments can be passed.  Would be nice if
-        # gpgconf added support for allow-preset-password
-        ExecStart=/usr/bin/gpg-agent --daemon --allow-preset-passphrase --max-cache-ttl 8640000
-        Restart=on-abort
+       [Service]
+       Type=forking
+       # Start GPG manually so that precise arguments can be passed.  Would be nice if
+       # gpgconf added support for allow-preset-password
+       ExecStart=/usr/bin/gpg-agent --daemon --allow-preset-passphrase --max-cache-ttl 8640000
+       Restart=on-abort
 
-        [Install]
-        WantedBy=default.target
+       [Install]
+       WantedBy=default.target
 
 2. Start the systemd service and kill any old `gpg-agent`s:
 
-        killall gpg-agent
-        systemctl --user start gpg-agent
+       killall gpg-agent
+       systemctl --user start gpg-agent
 
 3. Determine the key grip:
 
-        $ gpg --with-keygrip -k backup@local
-        pub   rsa4096/80A52AF1 2014-12-18
-              Keygrip = 7EB315BA6F5691BF448BCE9075B4C09D9EE150AD
-        uid       [ultimate] Backup <backup@local>
-        sub   rsa4096/A0EB95D4 2014-12-18
-              Keygrip = 33B64BFB62BBC97A516C00AC5D10DC1C4BF1438A
+       $ gpg --with-keygrip -k backup@local
+       pub   rsa4096/80A52AF1 2014-12-18
+             Keygrip = 7EB315BA6F5691BF448BCE9075B4C09D9EE150AD
+       uid       [ultimate] Backup <backup@local>
+       sub   rsa4096/A0EB95D4 2014-12-18
+             Keygrip = 33B64BFB62BBC97A516C00AC5D10DC1C4BF1438A
 
 4. Add the key manually with a simple script every time I reboot.  There won't be a prompt, it will just read your key from stdin:
 
-        /usr/lib/gnupg/gpg-preset-passphrase -v --preset 7EB315BA6F5691BF448BCE9075B4C09D9EE150AD
+       /usr/lib/gnupg/gpg-preset-passphrase -v --preset 33B64BFB62BBC97A516C00AC5D10DC1C4BF1438A
 
 5. Test it by signing a quick message, it shouldn't prompt you for the password:
 
-        $ echo test | gpg -a -s -u 80A52AF1
-        -----BEGIN PGP MESSAGE-----
-        Version: GnuPG v2
+       $ echo test | gpg -a -s -u 80A52AF1
+       -----BEGIN PGP MESSAGE-----
+       Version: GnuPG v2
 
-        [...]
-        -----END PGP MESSAGE-----
+       [...]
+       -----END PGP MESSAGE-----
