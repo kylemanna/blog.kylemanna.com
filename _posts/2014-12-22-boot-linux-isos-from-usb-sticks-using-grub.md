@@ -86,9 +86,26 @@ Furthermore, the remaining portion of the disk can be used for anything.  I've h
 
        sudo mkdir $USB/iso
        cd $USB/iso
-       sudo curl -O http://releases.ubuntu.com/14.04/ubuntu-14.04.1-desktop-amd64.iso
+       sudo wget -c http://releases.ubuntu.com/14.04/ubuntu-14.04.1-desktop-amd64.iso
 
-7. Add extra stuff.  Examples:
+7. For the *security paranoid*, download and verify signatures:
+
+       cd $USB/iso
+       sudo wget http://releases.ubuntu.com/14.04/SHA256SUMS.gpg http://releases.ubuntu.com/14.04/SHA256SUMS
+       gpg --keyserver keyserver.ubuntu.com --recv-keys FBB75451
+       gpg --export -a FBB75451 | sudo tee ubuntu.public.key
+       gpg --verify SHA256SUMS.gpg SHA256SUMS
+       sha256sum -c <(grep ubuntu-14.04.1-desktop-amd64.iso SHA256SUMS)
+
+    After rebooting into LiveCD, quick check can be done with, be sure to
+    manually verify the fingerprint to ensure the `ubuntu.public.key` file hasn't
+    been tampered with.
+
+       gpg --import ubuntu.public.key
+       gpg --verify SHA256SUMS.gpg SHA256SUMS
+       sha256sum -c <(grep ubuntu-14.04.1-desktop-amd64.iso SHA256SUMS)
+
+8. Add extra stuff.  Examples:
 
     * LUKS partition for sensitive data
     * General purpose partition for easy file transfers
