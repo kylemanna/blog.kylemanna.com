@@ -82,7 +82,7 @@ Furthermore, the remaining portion of the disk can be used for anything.  I've h
        }
        EOF
 
-6. Fetch an ISO.  In this case Ubuntu 14.04.1 well on my laptop and OS X "works" better on 14.04 then 14.10.
+6. Fetch an ISO.  In this case Ubuntu 14.04.1 works well on my System76 Galgo UltraPro laptop.  Surprisingly, 14.04 *works* better then 14.10 on my Apple 2012 Retina MacBook Pro.
 
        sudo mkdir $USB/iso
        cd $USB/iso
@@ -97,9 +97,7 @@ Furthermore, the remaining portion of the disk can be used for anything.  I've h
        gpg --verify SHA256SUMS.gpg SHA256SUMS
        sha256sum -c <(grep ubuntu-14.04.1-desktop-amd64.iso SHA256SUMS)
 
-    After rebooting into LiveCD, quick check can be done with, be sure to
-    manually verify the fingerprint to ensure the `ubuntu.public.key` file hasn't
-    been tampered with.
+    After rebooting into LiveCD, a quick check can be performed to verify the integrity of hte boot media.  Be sure to manually verify the fingerprint to ensure the `ubuntu.public.key` file hasn't been tampered with.  Security usability is hard, *sigh*.
 
        gpg --import ubuntu.public.key
        gpg --verify SHA256SUMS.gpg SHA256SUMS
