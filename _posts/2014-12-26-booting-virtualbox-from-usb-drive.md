@@ -20,12 +20,12 @@ Turns out it was semi easy to do.
 
 1.  Setup `DEV` for the device to be accessed from the virtual machine:
 
-        DEV=/dev/sdc
+        DEV=/dev/sdx
 
 2.  Create the VirtualBox disk (on Linux, other OS are similar):
 
         sudo chown $USER $DEV
-        sudo VBoxManage internalcommands createrawvmdk -filename ~/VirtualBox\ VMs/usb.vmdk -rawdisk $DEV
+        VBoxManage internalcommands createrawvmdk -filename ~/VirtualBox\ VMs/usb.vmdk -rawdisk $DEV
 
     Unfortunately the permissions are screwy and your local user needs to access `$DEV`.  Since udev manages `/dev` these days, the permissions will revert to normal on the next hotplug.
 
