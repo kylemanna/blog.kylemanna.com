@@ -19,7 +19,7 @@ Furthermore, the remaining portion of the disk can be used for anything.  I've h
 
 1. Define some environmental variables used later:
 
-       DEV=/dev/sdc
+       DEV=/dev/sdx
        USB=/mnt/usb
 
 2. Zero the old partition table and create a new one, feel free to tweak the size of the boot partition if you intend to hold more then 1 or 2 ISO images.  The `grub` partition is where the GRUB boot loader will be setup, don't use this partition directly.  The `boot` partition is where all the primary boot files are stored.
