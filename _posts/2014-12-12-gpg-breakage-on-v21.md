@@ -82,3 +82,8 @@ Use `allow-preset-passphrase` to cache my backup encryption key passphrase.  I'l
 
        [...]
        -----END PGP MESSAGE-----
+
+
+## GPG For Mutt
+
+GPG also broke my mutt mail client integration.  My migration to gpgme for mutt was overdue it appears.
