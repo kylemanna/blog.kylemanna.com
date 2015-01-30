@@ -30,3 +30,10 @@ Turns out it was semi easy to do.
     Unfortunately the permissions are screwy and your local user needs to access `$DEV`.  Since udev manages `/dev` these days, the permissions will revert to normal on the next hotplug.
 
 3.  Create a new VirtualBox machine.  When prompted to create a new hard drive, specify `~/VirtualBox VMs/usb.vmdk`.  Ubuntu 14.04 Desktop requires at least 1 GB of RAM, so keep that in mind when creating the virtual machine.
+
+
+## Apple OS X Notes
+
+* Sometimes OS X insists on automounting volumes which causes VirtualBox to complain about with errors like `VBOX_E_OBJECT_NOT_FOUND`.  Try unmounting to release the resource:
+
+        diskutil unmountDisk $DEV
