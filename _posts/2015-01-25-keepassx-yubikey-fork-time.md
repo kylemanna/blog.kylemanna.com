@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "KeePassX + YubiKey Fork Time?"
-tagline: ""
-category: 
-tags: []
+tagline: "too much silence"
+category: security
+tags: [keepassx, yubikey, yubico, fork, github]
 ---
 {% include JB/setup %}
 
