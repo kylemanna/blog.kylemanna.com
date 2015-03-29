@@ -8,6 +8,6 @@ end
  
 desc 'Build and deploy'
 task :deploy => :build do
-  sh 'rsync -azh --progress --stats --delete _site/ kylemanna@blog.kylemanna.com:blog.kylemanna.com'
+  sh 'rsync -azh --progress --stats --delete _site/ kylemanna@ssh.kylemanna.com:blog.kylemanna.com'
   sh 'git push origin master'
 end
