@@ -77,7 +77,7 @@ To test the configuration, run the following:
 
 The result should be that the command blocks and appears to hang.  At the same time, verify that port 12345 is now listening on the server.  If port 22 on the client is in fact the ssh server this can be quickly tested by reading some data over the connection such as the SSH server's version using netcat:
 
-	server $ netcat localhost 16768
+	server $ netcat localhost 12345
 	SSH-2.0-OpenSSH_5.9
 
 After testing is complete, use CTRL-c to break both the ssh and netcat command.  If something didn't work, double check the steps above for errors before proceeding.
