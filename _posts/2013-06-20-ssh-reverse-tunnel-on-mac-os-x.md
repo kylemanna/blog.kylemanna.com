@@ -7,8 +7,7 @@ tags: [ mac, osx, ssh ]
 ---
 {% include JB/setup %}
 
-Phone Home
-----------
+## Phone Home
 
 I want to always be able to *securely* connect to my Mac Book Pro anywhere in the world.  The following guide will enable me to connect to the laptop if I leave it at home, leave it at work, or in the unfortunate event that someone steals it and the thief defeats File Vault full disk encryption.  This phone home technique will work as long as the laptop can create an outgoing ssh connection.  It will work behind NAT routers, but probably not behind strong corporate firewalls that only allow web proxy traffic out (something like corkscrew could help with this if you need it).
 
@@ -18,8 +17,7 @@ In addition to the obvious purpose of connecting to a remote laptop that moves a
 
 Fun stuff.
 
-Setup The Server
-----------------
+## Setup The Server
 
 First step is to setup an <code>authorized_keys</code> file to allow logins for a private key, run the following on the client machine (Mac OS X laptop in my case).  If Elliptic Curve DSA (ECSDA) is available and supported on both ends, it can be used by adding "-t ecdsa" to the ssh-keygen command. Example default dsa key generation:
 
@@ -64,8 +62,7 @@ Additionally, if it's possible to modify the sshd_config file on the server, it 
 The above modification will ping the client every 60 seconds the connection is idle as defined the <code>ClientAliveInterval</code> which is disabled by default.  If <code>ClientAliveCountMax</code> (defaults to 3) number of pings go unanswered, the server will drop the connection.  This is critical to detecting the remote client has disappeared and freeing up the port defined below for a reconnect from the client when it comes back online.  It isn't strictly necessary as the server will drop the connection after a while on its own, but significantly speeds up reconnects.
 
 
-Test the Server Setup from the Client
--------------------------------------
+## Test the Server Setup from the Client
 
 Verify that the server is correctly setup by running the ssh command manually.  This is important for two reasons:
 1. The first time the ssh client connects to the server, it by default needs the user to manually accept the host's ssh key.  This will never succeed in the automated launchd task described below and must be done ahead of time.
@@ -83,8 +80,7 @@ The result should be that the command blocks and appears to hang.  At the same t
 After testing is complete, use CTRL-c to break both the ssh and netcat command.  If something didn't work, double check the steps above for errors before proceeding.
 
 
-Setup The Client on OS X
-------------------------
+## Setup The Client on OS X
 
 Apple uses launchd to launch system services.  The purpose of launchd is very similar to [Ubuntu's upststart](http://upstart.ubuntu.com/) and [Freedesktop's systemd](http://en.wikipedia.org/wiki/Systemd) in that it's goal is to start services and manage them.
 
@@ -145,8 +141,7 @@ Launchd will start up ssh as directed by the plist and connect to the remote ser
 If it is working, your Mac OS X will automagically open a reverse tunnel to the server described above.  You can then login to the client Mac OS X machine by using <code>ssh -p12345 user@localhost</code> on the server.  Note that the host will always be localhost due to port forwarding, and the user is the user on the Mac OS X client.
 
 
-Doing Event More
-----------------
+## Doing Even More
 
 I'm looking only to ssh back in to my laptop, but with a few modifications to the launchd plist, it's possible to use this to setup ssh vpn tunnels using tun interfaces.  Refer to the ssh man page for the the "-w" option.  You'll need to setup routes and what not to fully use it.  Things get complicated quick and many times OpenVPN is a better solution.
 
