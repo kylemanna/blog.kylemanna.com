@@ -14,7 +14,7 @@ First site I tried was Kaiser Permanente. I found their online quote competitive
 
 ## Strike 2
 
-I then went to Covered CA site.  Surely the government has a system to proxy all my data realisably and intelligently.  Nope.  Created an account, charged through their enrollment process and then full stop with:
+I then went to Covered CA site.  Surely the government has a system to proxy all my data securely and realiably.  Nope.  Created an account, charged through their enrollment process and then full stop with:
 
 > The Federal Data Services Hub is not accessible at this time to confirm your identity. Please come back later to finish your application.
 
