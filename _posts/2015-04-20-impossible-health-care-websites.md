@@ -30,6 +30,16 @@ As part of the process, I need to upload a document stating my termination of be
 
 I'm sorry, are you kidding me?  This is a new level of incompetence.  I remove the spaces and throw it over the wall again awaiting my next surprise which has not yet come.
 
+## Update 2015.04.28
+
+To login, it pops-up a "username" login window.  Then directs me to a new page where I can enter just my password.  Whaaaat? Why?
+
+Upon trying to login to Health Net, suddenly my password is too long.  The password input field was only 15 characters.  After some hacking with Chrome I was able to extend it 20+ characters and then finally fill my password in login.
+
+After logging in, I was hoping to change my password so I don't need to re-write the broken page each time, but that's just not an option.  These people.  Seriously?
+
+And to continue the frustration Kaiser Permanente and Covered CA keep emailing me once a week reminding me to finish my application.  If only I could...
+
 ## Conclusion
 
 My personal information has been put in the hands of the most incompetent set of sites I have ever visited.  It will surely be stolen.  When it's stolen, I can be certain that nobody will ever know as these clowns won't even know their security was breached since they can't even handle a file upload with spaces in it. FML.
