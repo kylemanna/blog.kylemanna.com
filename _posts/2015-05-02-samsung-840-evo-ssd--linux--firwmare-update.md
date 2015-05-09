@@ -64,3 +64,9 @@ More errors on my [Github Gist](http://bit.ly/1zFnmjM) for those interested.
 It's worth mentioning that `dm-cache`/`lvmcache` is thrashing that SSD after I took my SSD cached logical volume out of `cleaner` policy and back to `mq` policy.  Eitherway, the device shouldn't timeout SATA commands even if it is busy.
 
 Time to double check that my daily back-ups are operating as expected.
+
+## Update
+
+As of 2015.05.09 my system would still generate sporadic timeout errors.  I've abandoned the hope that a background firmware task was doing something and would pass.  I've now re-mounted all my filesystems (btrfs and ext4) without the `discard` flag I was using before.  There's a chance this is the smoking gun as I've [seen this before](/linux/2013/05/05/ssd-trim/).
+
+Someone commented on my Github Gist saying they are seeing the same issues.  Anyone else?  Post in the comments below.
