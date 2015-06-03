@@ -65,12 +65,13 @@ The above modification will ping the client every 60 seconds the connection is i
 ## Test the Server Setup from the Client
 
 Verify that the server is correctly setup by running the ssh command manually.  This is important for two reasons:
+
 1. The first time the ssh client connects to the server, it by default needs the user to manually accept the host's ssh key.  This will never succeed in the automated launchd task described below and must be done ahead of time.
 2. Verify nothing is broken.
 
 To test the configuration, run the following:
 
-	client $ ssh -NT -R 12345:localhost:22 remoteuser@servername
+	client $ ssh -i ~/.ssh/servername-home-fwd -NT -R 12345:localhost:22 remoteuser@servername
 
 The result should be that the command blocks and appears to hang.  At the same time, verify that port 12345 is now listening on the server.  If port 22 on the client is in fact the ssh server this can be quickly tested by reading some data over the connection such as the SSH server's version using netcat:
 
@@ -85,6 +86,7 @@ After testing is complete, use CTRL-c to break both the ssh and netcat command. 
 Apple uses launchd to launch system services.  The purpose of launchd is very similar to [Ubuntu's upststart](http://upstart.ubuntu.com/) and [Freedesktop's systemd](http://en.wikipedia.org/wiki/Systemd) in that it's goal is to start services and manage them.
 
 In a nuthsell the primary features needed for this phone home script are:
+
 1. Run at start-up without user intervention
 2. Run as another user
 3. Restart a process when it dies
