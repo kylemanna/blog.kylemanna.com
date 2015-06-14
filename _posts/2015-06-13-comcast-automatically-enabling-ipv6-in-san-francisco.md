@@ -32,3 +32,18 @@ Meanwhile, the tech leaders like Google and FaceBook, for instance, enabled IPv6
 ## Closing Thoughts
 
 I'm excited to see IPv6 come to fruition!  I'm excited to see NAT die, which at best is a hacky workaround.  I hope that the stumbling blocks don't scar IPv6 as big roll outs happen but anticipate sensational journalist playing the stumbling blocks for all they're worth.
+
+## Update 2015.06.14
+
+Alot of people are saying this isn't new and that IPv6 has been around for a while.  Yes, I have been using IPv6 at home after explicitly setting it up for almost 2 years.  What is noteworthy is that Comcast managed routers are now pushing it out automatically to residences that I know did not have it one month ago.
+
+As further indication of changes within Comcast's network, they broke the /60 IPv6 prefix delegation that has been working for almost 2 years for me just a few days ago.  From my router logs ([full gist](https://gist.github.com/1cec3537f61aefd1d6bc)):
+
+    Jun 12 18:24:16 core.hq dhcp6c[1354]: get_ia: update an IA: PD-1
+    Jun 12 18:24:16 core.hq dhcp6c[1354]: update_prefix: update a prefix 2601:9:4f00:xxx0::/60 pltime=0, vltime=0
+    Jun 12 18:24:16 core.hq dhcp6c[1354]: remove_siteprefix: remove a site prefix 2601:9:4f00:xxx0::/60
+    Jun 12 18:24:16 core.hq dhcp6c[1354]: ifaddrconf: remove an address 2601:9:4f00:xxx0::1/64 on lan0
+    Jun 12 18:24:16 core.hq dhcp6c[1354]: ifaddrconf: remove an address 2601:9:4f00:xxx1::1/64 on wifi0
+    Jun 12 18:24:16 core.hq dhcp6c[1354]: update_prefix: create a prefix 2601:646:200:xxxx::/64 pltime=345600, vltime=345600
+
+Something definitely changed.  And it's [affecting others as well](http://bit.ly/1Qxmy7Y).  A few steps forward, one step back.  I assume the Comcast network engineers will have this fixed shortly.
