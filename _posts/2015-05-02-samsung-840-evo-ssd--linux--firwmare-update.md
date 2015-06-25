@@ -65,8 +65,12 @@ It's worth mentioning that `dm-cache`/`lvmcache` is thrashing that SSD after I t
 
 Time to double check that my daily back-ups are operating as expected.
 
-## Update
+## Update 2015.05.09
 
-As of 2015.05.09 my system would still generate sporadic timeout errors.  I've abandoned the hope that a background firmware task was doing something and would pass.  I've now re-mounted all my filesystems (btrfs and ext4) without the `discard` flag I was using before.  There's a chance this is the smoking gun as I've [seen this before](/linux/2013/05/05/ssd-trim/).
+Currently my system generates sporadic timeout errors.  I've abandoned the hope that a background firmware task was doing something and would pass.  I've now re-mounted all my filesystems (btrfs and ext4) without the `discard` flag I was using before.  There's a chance this is the smoking gun as I've [seen this before](/linux/2013/05/05/ssd-trim/).
 
 Someone commented on my Github Gist saying they are seeing the same issues.  Anyone else?  Post in the comments below.
+
+## Update 2015.06.25
+
+Others are experiencing this problem.  [There is a work around](/hardware/2015/06/25/samsung-840-evo-trim-support-blacklisted-after-firmware-upgrade).
