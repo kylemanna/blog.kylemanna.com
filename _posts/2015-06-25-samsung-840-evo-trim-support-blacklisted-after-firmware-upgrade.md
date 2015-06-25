@@ -27,14 +27,14 @@ The search starts and thanks to Linux and git, the search was finished in a few 
     Date:   Mon May 4 12:20:29 2015 -0400
 
         libata: Blacklist queued TRIM on all Samsung 800-series
-        
+
         The queued TRIM problems appear to be generic to Samsung's firmware and
         not tied to a particular model. A recent update to the 840 EVO firmware
         introduced the same issue as we saw on 850 Pro.
-        
+
         Blacklist queued TRIM on all 800-series drives while we work this issue
         with Samsung.
-        
+
         Reported-by: Günter Waller <g.wal@web.de>
         Reported-by: Sven Köhler <sven.koehler@gmail.com>
         Signed-off-by: Martin K. Petersen <martin.petersen@oracle.com>
