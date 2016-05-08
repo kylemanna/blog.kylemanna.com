@@ -32,6 +32,7 @@ I poke around the Internet and stumbled on the [Molex PicoBlade 1.25 mm series](
 ## Bonus
 
 After adopting the PicoBlade I fell in love with them for a number of other reasons:
+
 * Through hole *and* surface mount receptacles. JST SH are surface mount only.
 * Wire gauge of 26-32 AWG vs 28-32 AWG.  Finding [26 AWG stranded wire](http://amzn.to/1NnFmQW) is considerably easier when [prototyping](https://www.adafruit.com/categories/472).
 * Pre-crimped wires in two lengths to skip crimping all together.  These appear harder to source then the rest of the series components.
