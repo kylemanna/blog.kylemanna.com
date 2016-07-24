@@ -111,7 +111,7 @@ How about the processors?  Did they move to a new generation?
 
 It certainly looks like a step forward in processor technology.  Small lithography process, lower clock speed, lower power, and of course, more cores.  That's what DigitalOcean is selling primarily is cores + RAM + SSD space.
 
-Intel's [ARK highlights the differences](http://ark.intel.com/compare/92978,64585) between the processor generations.
+Intel's [ARK highlights the differences](http://ark.intel.com/compare/64593,64585) between the processor generations.
 
 ## Conclusion
 
