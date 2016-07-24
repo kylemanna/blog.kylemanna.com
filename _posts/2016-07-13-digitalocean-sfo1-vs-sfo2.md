@@ -109,12 +109,12 @@ How about the processors?  Did they move to a new generation?
     address sizes   : 40 bits physical, 48 bits virtual
     power management:
 
-It certainly looks like a step forward in processor technology.  Small lithography process, lower clock speed, lower power, and of course, more cores.  That's what DigitalOcean is selling primarily is cores + RAM + SSD space.
+The SFO2 datacenter might actually preform slower then the SFO1 datacenter because the chips (after updating the Intel ARK link) are actually clocked slower and are of the same generation.  DigitalOcean traded per core performance for CPU core density.
 
 Intel's [ARK highlights the differences](http://ark.intel.com/compare/64593,64585) between the processor generations.
 
 ## Conclusion
 
-DigitalOcean did the logical thing: moved to newer processor that will allow them to run more droplets per host while consuming less power. Surprise? Of course not.
+DigitalOcean is apparently maximizing profit by increasing density while reducing per core performance on old hardware. Perhaps the servers sold or leased to them at a discount?  I don't know, but certainly doesn't look like much of a step forward (if at all) in terms of performance.
 
 But now we know.
