@@ -7,8 +7,9 @@ amzn_assoc_ad_type = "smart";
 amzn_assoc_marketplace = "amazon";
 amzn_assoc_region = "US";
 amzn_assoc_linkid = "14d5e7cf6e63eb46cec7da85277d0474";
+amzn_assoc_rows = "1";
 amzn_assoc_emphasize_categories = "2619525011,15684181,283155,13900861,2335752011,13900871,130,172282,979455011,16310101,1055398,16310091,284507,10272111,1064954,2972638011,2619533011,3375251,228013,165793011,377110011";
-amzn_assoc_fallback_mode = {"type":"search","value":"linux"};
+amzn_assoc_fallback_mode = {"type":"search","value":"electronics"};
 amzn_assoc_default_category = "All";
 </script>
 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
