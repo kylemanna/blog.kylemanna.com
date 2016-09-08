@@ -46,7 +46,7 @@ Now a private key has been generated, read the public key on the client and copy
 
 	client $ cat ~/.ssh/servername-home-fwd.pub
 
-On the server paste the private key on it's own line in <code>~/.ssh/authorized_keys</code> or use <code>ssh-copy-id</code> for easy installation if available. Prefix the public key with <code>command="",no-pty</code> to prevent any commands from being executed using this private key and to prevent wasting resources for a pty (not a security feature).  Optionally add a comment to the end so you can keep track of the purpose of this installed public key.  The result should look something like the following:
+On the server paste the **public key** on it's own line in <code>~/.ssh/authorized_keys</code> or use <code>ssh-copy-id</code> for easy installation if available. Prefix the public key with <code>command="",no-pty</code> to prevent any commands from being executed using this private key and to prevent wasting resources for a pty (not a security feature).  Optionally add a comment to the end so you can keep track of the purpose of this installed public key.  The result should look something like the following:
 
 	server $ cat ~/.ssh/authorized_keys
 	command="",no-pty ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUWUrEMfnP65pGSwdLFP323K7AG8Ah5JC0ArC660z7V0i3wSBf1lXnN3coc/ndw7C7NQw+wLTNp7FjkxheyNiMhf65pZI41HR+JJleQsAwCCpFwftKutfknpvai6FRkfE173iXGAU5YFGmlHBo3oAiSn09ZOAXieZ0+Sr0ZEAF5gJLLG4E94JUdEtCXcLYPWu0YX//k+PVvaK1/IjJ6gJGbzT+KA5Gv4VZecL+UC7VvgtcO6UBVNHo4eQBPdhiT1Asg71e3io2y+AwGg0J2smBcuhmrf3ud/BFNgHFjF3a7ilF2Hh7AYV16rRJrOazH83IBzgiBysiakF3OSHQXozV client@server:phone-home
