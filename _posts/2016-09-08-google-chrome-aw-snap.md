@@ -8,7 +8,7 @@ tags: [linux, chrome, chromium, google]
 
 ## Aw, Snap!
 
-For the longest time I ran Google Chrome (v53.0.2785.92 at the time of writing) package from the AUR.  When I did the initial research between Chrome and Chromium, it seemed that Chrome was simpler as it came things like Flash player and PDF viewer out of the box.  And that was life until maybe a month or so ago.
+For the longest time I ran Google Chrome (v53.0.2785.92 at the time of writing) package from the AUR on Arch Linux.  When I did the initial research between Chrome and Chromium, it seemed that Chrome was simpler as it came things like Flash player and PDF viewer out of the box.  And that was life until maybe a month or so ago.
 
 More recently, Google Chrome has made a habit of saying "Aw, Snap!".
 ![Google Chrome - Aw, Snap!](http://i.imgur.com/sebgnJ7.png)
@@ -71,7 +71,7 @@ Check my kernel message buffer with dmesg, and what do we see?  The out of memor
 
 I disabled all the Chrome extensions.  Better? No.
 
-Switched to Arch's Chromium build with new user profiles hoping a locally built version would behave better.  Better? No.
+Switched to the Arch Linux Chromium build with new user profiles hoping a locally built version would behave better.  Better? No.
 
 It's not out of memory, the simple fixes didn't work.  What else could it be?  Perhaps I'll run the [memory profiler built-in to Chrome](https://chromium.googlesource.com/chromium/src/+/master/components/tracing/docs/memory_infra.md), but that crashed as well with the the kernel OOM killer or hitting a userspace limit:
 
