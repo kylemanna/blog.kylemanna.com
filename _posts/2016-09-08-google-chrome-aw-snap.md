@@ -88,6 +88,10 @@ Starting point for my system was 67MB:
     ~ ❯❯❯ cat /proc/sys/vm/min_free_kbytes
     67000
 
+And to watch the different size pages become exhausted watch the [buddyinfo](https://www.kernel.org/doc/Documentation/filesystems/proc.txt) file at `/proc/buddyinfo'
+
+    ~ ❯❯❯ watch -dn1 cat /proc/buddyinfo
+
 To test the problem I brought it down to 25MBs and opened a bunch of tabs.  Problem reproduced easier and sooner.
 
 Satisfied with solving something at least close to the real problem led me to just increase it to 1% of my available memory or 160MB:
