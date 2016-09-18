@@ -1,8 +1,10 @@
 # main links links
 main:
-  - title: "Archive"
-    url: #
+  - title: "Past Work"
+    url: "/past-work/"
+  - title: "Experience"
+    url: "/experience/"
   - title: "Tags"
-    url: "/tags"
+    url: "/tags/"
   - title: "Categories"
-    url: "/categories"
+    url: "/categories/"
