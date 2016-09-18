@@ -5,4 +5,4 @@ main:
   - title: "Tags"
     url: "/tags"
   - title: "Categories"
-    url: "#/categories"
+    url: "/categories"
