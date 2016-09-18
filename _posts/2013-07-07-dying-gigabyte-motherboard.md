@@ -12,8 +12,8 @@ For a few weeks, the monitor plugged in the DVI port of the on-board graphics wo
 
 In every case the monitor would resolve itself after I power cycled it.  Time for a new monitor after I move to my new apartment right?  Not so fast...
 
-<img src="http://i.imgur.com/q90GXWL.jpg"/>
-<img src="http://i.imgur.com/mtGgN6V.jpg"/>
+![Red Monitor Corruption BIOS Boot](https://i.imgur.com/q90GXWL.jpg)
+![Red Monitor Corruption Color Bar Test](https://i.imgur.com/mtGgN6V.jpg)
 
 Next Level of Broken
 ====================
@@ -30,7 +30,7 @@ As a last hope, I went to the BIOS and reset everything to "Optimized Defaults" 
 
 Maybe the mysterious P13VDP buffer near the HDMI connector is to blame.
 
-<img src="http://i.imgur.com/Gj0Zz7B.jpg"/>
+![Chip Buffer That May Have Failed](https://i.imgur.com/Gj0Zz7B.jpg)
 
 
 Next Steps

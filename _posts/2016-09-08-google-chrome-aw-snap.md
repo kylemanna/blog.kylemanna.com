@@ -10,7 +10,7 @@ tags: [linux, chrome, chromium, google]
 For the longest time I ran Google Chrome (v53.0.2785.92 at the time of writing) package from the AUR on Arch Linux.  When I did the initial research between Chrome and Chromium, it seemed that Chrome was simpler as it came things like Flash player and PDF viewer out of the box.  And that was life until maybe a month or so ago.
 
 More recently, Google Chrome has made a habit of saying "Aw, Snap!".
-![Google Chrome - Aw, Snap!](http://i.imgur.com/sebgnJ7.png)
+![Google Chrome - Aw, Snap!](https://i.imgur.com/sebgnJ7.png)
 
 That's right. But why? A quick Google search will show that this typically caused by running out of memory. Ok, simple to test right. Except, I'm not out of memory.  My system has 16 GB of RAM, and while I fully believe Chrome could consume all of that with just Gmail loaded, it's not out of RAM, not even close.  Plenty of swap and plenty of RAM doing nothing more then file system caching.  So what's going wrong?
 

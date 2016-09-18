@@ -220,7 +220,7 @@ I soon realized that Mailjet requires me to verify *every* sending domain.  All 
 
 In other news, ColoCrossing finally was removed from the blacklist.  I received this nice little email from MxToolbox informing me:
 
-[![MxToolbox email screenshot](http://i.imgur.com/Lu4xTe5l.png)](http://imgur.com/Lu4xTe5)
+[![MxToolbox email screenshot](https://i.imgur.com/Lu4xTe5l.png)](https://imgur.com/Lu4xTe5)
 
 64 days later.
 

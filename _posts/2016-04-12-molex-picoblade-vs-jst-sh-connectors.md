@@ -44,4 +44,4 @@ After adopting the PicoBlade I fell in love with them for a number of other reas
 
 I took some quick pictures of my JST SH <-> Molex PicoBlade adapter.
 
-[![Connector Image](http://i.imgur.com/4OgHyJ5l.jpg)](http://imgur.com/a/VqOvI)
+[![Connector Image](https://i.imgur.com/4OgHyJ5l.jpg)](https://imgur.com/a/VqOvI)

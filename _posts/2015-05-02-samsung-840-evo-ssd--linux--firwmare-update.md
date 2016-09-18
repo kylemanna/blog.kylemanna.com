@@ -34,7 +34,7 @@ I did some quick before and after tests using (GNOME Disks Utility](https://wiki
 There is a [mess of images onthe before and after results were quite repeatable with the for people more interested in performance details.  Note the firmware version, partition and sample size in the screenshots.
 
 The most significant improve is visible here.  The first image is before the image update and the second one is after (surprise!).
-![Before](http://i.imgur.com/9QiLcyjl.png) ![After](http://i.imgur.com/H9oCZqWl.png)
+![Before](https://i.imgur.com/9QiLcyjl.png) ![After](https://i.imgur.com/H9oCZqWl.png)
 
 For this partition, a rarely used 14% full 124GB btrfs partition, the first 20% of the partition had volatile throughput performance.  The before and after results were quite repeatable with and more tests can be found on [Imgur](http://bit.ly/1DLT6yr).  The latency was all over across tests since the disk partially in use by some background tasks in Linux, but largely unchanged by the update.  I speculate that the volatile performance is in the region of the disk where data is actually stored, the numbers seem to make sense.
 
