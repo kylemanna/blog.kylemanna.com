@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/manna
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://blog.kylemanna.com
+  * I am manna (https://keybase.io/manna) on keybase.
+  * I have a public key with fingerprint 4517 8BD1 CE14 B9C2 FD9D  1F77 BD7B DC6C 5FE8 6F8B
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.4.7"
+        },
+        "key": {
+            "fingerprint": "45178bd1ce14b9c2fd9d1f77bd7bdc6c5fe86f8b",
+            "host": "keybase.io",
+            "key_id": "BD7BDC6C5FE86F8B",
+            "uid": "53bbf73e87aca343cc93392fb8051d00",
+            "username": "manna"
+        },
+        "merkle_root": {
+            "ctime": 1402984759,
+            "hash": "d53e8c969b6689bab76343cc06ea07e1bf73b781606f01eb9e5054a5e5607cdafc5f26ec03ba454c3f0f9f2ade8f0d4561f6168390a9e01c034dec1c1edd4f24",
+            "seqno": 19442
+        },
+        "service": {
+            "hostname": "blog.kylemanna.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1402985092,
+    "expire_in": 157680000,
+    "prev": "7764fea4f815621a1171514f7d8d7b15472769323d93c344a3a674f2fef48ba5",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owFVUmtMHFUUXrYUeZWH9AEpxWatpm3oMrNzZ+4MUkgpEBqBqkRQa7PM4w47suzA
+7PJmQzFVeaRKRRKlYoWSNMWlkIbYUKFtMFUptFBAA7WktLy1RgoKSbXUGYLR3twf
+997zne983zm3ZtMGnd6tu+SO1TwnV7v1zXO61NO3K0oMnCwUGSJLDLxVQjaHdrKx
+2cgQachCRRxrR0ZJ3mmTBWR8x75zHRNuyEeKXZJtKgozAiM0OMM1uJYsSrZMpOQo
+ksZlACQOaU7AeYQDjuFNosAIuAghJ6ibp3hSRDQl0pxKaZHtjqeqGtY4zZKgvsbG
+wdi4g9RBMiGephLoWDWWtxYgCY4TIYFoyPIsAQieZwiCMYkcjZG4gGEa0I6UdUvZ
+rM3GamKzkZJlRWZFltcc8w5Ji+MAMzE0gCSjymHtFjVDIFVunqEYjqJohmM5SK1V
+wSjEYhDhWnEO0jiFUSKGI45BJEYClkQkhUFeYEXVoolCPEZwLCABT4iYyIgmVkC0
+iAmApHCRwimaYDCWQRiu4oCAeJzHkSAA0QRU/XaUa5NVcQwAJqd2VfIlHmmytZat
+O+OscqYxq8iK1iwaeTlbzcxRZIfMy1Y1bnE4ciI1546iHA1fgNo48zqVmZNsgjq2
+/88VV6FPdYXEGFO4ARXmSAoySxqChBSNqUurg/JVTggpICIWiDROUiacxXGIkzgQ
+oUCr48ZJAE2QYggTITAETwDAEiwFVZMiEgHNseR/XoGqk81UKe1Spo115CnI4KzU
+h7rr3PQ6j4167ePqvL0C/v3NY1X+j8OCfQqnJzZNN3/yt9/ME2U2LePQ90xGzMne
+za8Z9n1WYb25WqAb/TJ06Hrxhrpj+e59vieG/c/6zVQk43s9F+d31Qf1VNR1XmlM
+ps68Iaz8Mm6+tHlfS6419MJxH31Mx/ON58uUIw1BywOXWuKPXvVzT9f3eR3Livro
+m/iRGuv2lOf6VquHAweejYloSTR2cSFR88FZruX++WYPnweDt2NXtsSseMHKjD/G
+/xyK8Cy9e7bDmaQvbIwaPByWHv1QtzEneiZ/7K85rOXTV313KGXcRMHlzj0DTXUj
+gaO+abaW1x91vVu8WP4+vBFS9m1uZ1pVhH9n0sTWNw/2OJf0IzvMF6ZKy580ZjRY
+5pbu9y5FpuuSm1xVj0qwwqn4F25MDhi7Pfbs7068Xntr1pZ6KuC71fpXxiPupp/q
+qI3TLbRywdt3p54LnNIfuvrT8Fcpnh4JQ95hC+Mu4eUEvjyg5u32j9unU9yv/d57
+ZO+Br12hlzt+PTztmn2mrd+0Mpayit3fdie18mc5+oPSD+EPjwMWgl2jUgLoP2m5
+6ZF7vGYMtnfG16cvJ01NTsL3/FGx0nVtefqoEOXGhf/2Y2Pz5PwXsX77famLlZbE
+oTNuW5w+zmrvz7Pu3atpfetiSFVY1eDDntFUn9OgLW/bi/OtL11xrx3YGjS5aPGx
+nt91K9LLa/e5Aw1zzU2ZyQ/+AQ==
+=zra0
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/manna
+
+==================================================================
