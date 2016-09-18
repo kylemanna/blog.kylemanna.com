@@ -9,6 +9,20 @@ RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
+# Old permalinks missing categories
+RewriteRule ^2013/07/07/(dying-gigabyte-motherboard) /hardware/$1 [R=301,L]
+RewriteRule ^2013/07/14/(fssh-part-2-tmux-and-vim) /cli/$1/ [R=301,L]
+RewriteRule ^2014/04/21/(two-factor-2fa-ssh-authentication-using-yubikey) /security/$1/ [R=301,L]
+RewriteRule ^2014/12/12/(gpg-breakage-on-v21) /linux/$1/ [R=301,L]
+RewriteRule ^2015/10/01/(rest-in-pieces-lg-optimus-g-aka-e970) /mobile/$1/ [R=301,L]
+
+# Fix old duplicate dashes
+RewriteRule ^.*2014/08/19/linux--radeon-hd-4200--reduced-blanking /linux/linux-radeon-hd-4200-reduced-blanking/ [R=301,L]
+RewriteRule ^.*2015/05/02/samsung-840-evo-ssd--linux--firwmare-update /hardware/samsung-840-evo-ssd-linux-firwmare-update/ [R=301,L]
+RewriteRule ^.*2014/07/28/disk-caching-kernel-tree-benchmarks-using-dm-cache--lvmcache /linux/disk-caching-kernel-tree-benchmarks-using-dm-cache-lvmcache/ [R=301,L]
+RewriteRule ^.*2015/07/11/docker--systemd-network-surprise /linux/docker-systemd-network-surprise [R=301,L]
+RewriteRule ^.*2014/04/24/ubuntu-1404-lts-on-openvz--ufw-and-iptables-firewall /linux/ubuntu-1404-lts-on-openvz-ufw-and-iptables-firewall [R=301,L]
+
 # Old permalinks
 RewriteRule ^(.+)/(\d{4})/(\d{2})/(\d{2})/(.+)$ /$1/$5 [R=301,NC,L]
 
@@ -16,12 +30,6 @@ RewriteRule ^(.+)/(\d{4})/(\d{2})/(\d{2})/(.+)$ /$1/$5 [R=301,NC,L]
 RewriteRule ^rss.xml /feed.xml [R=301,NC,L]
 RewriteRule ^atom.xml /feed.xml [R=301,NC,L]
 RewriteRule ^sitemap.txt /sitemap.xml [R=301,NC,L]
-
-# Old permalinks missing categories
-RewriteRule ^2013/07/07/(dying-gigabyte-motherboard) /hardware/$1 [R=301,NC,L]
-RewriteRule ^2013/07/14/(fssh-part-2-tmux-and-vim) /cli/$1 [R=301,NC,L]
-RewriteRule ^2014/04/21/(two-factor-2fa-ssh-authentication-using-yubikey) /security/$1 [R=301,NC,L]
-RewriteRule ^2014/12/12/(gpg-breakage-on-v21) /linux/$1 [R=301,NC,L]
-RewriteRule ^2015/10/01/(rest-in-pieces-lg-optimus-g-aka-e970) /mobile/$1 [R=301,NC,L]
+RewriteRule ^tags.html /tags/ [R=301,NC,L]
 
 </IfModule>
