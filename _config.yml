@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Bootloader"
+title                    : "Bootloader Blog"
 title_separator          : "-"
 name                     : "Kyle Manna"
-description              : "Thoughts from the lowest level"
+description              : "Kyle Manna's personal blog covering embedded systems, Linux and sometimes entrepreneurship"
 url                      : "https://blog.kylemanna.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -66,7 +66,11 @@ og_image                 : # Open Graph/Twitter default site image
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links:
+    - https://twitter.com/2bluesc
+    - https://facebook.com/2bluesc
+    - https://github.com/kylemanna
+    - https://www.linkedin.com/in/kylemanna
 
 # Analytics
 analytics:
