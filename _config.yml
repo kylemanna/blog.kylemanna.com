@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "Bootloader"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "Kyle Manna"
+description              : "Thoughts from the lowest level"
 url                      : "https://blog.kylemanna.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -18,9 +18,9 @@ teaser                   : # filename of teaser fallback teaser image placed in 
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : "disqus"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : kylemanna
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -55,10 +55,10 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : 2bluesc
 facebook:
-  username               :
-  app_id                 :
+  username               : 2bluesc
+  app_id                 : 1699938753662885
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
@@ -70,37 +70,37 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : UA-15644081-3
 
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : "bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  name             : "Kyle Manna"
+  avatar           : "bio-bluepolo-glasses.jpg"
+  bio              : "Entrepreneur and chip whisperer."
+  location         : "San Francisco"
   email            :
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "2bluesc"
   foursquare       :
-  github           :
-  google_plus      :
-  keybase          :
-  instagram        :
+  github           : "kylemanna"
+  google_plus      : "KyleManna"
+  keybase          : "manna"
+  instagram        : "2bluesc"
   lastfm           :
-  linkedin         :
+  linkedin         : "kylemanna"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : "2bluesc"
   vine             :
   weibo            :
   xing             :
