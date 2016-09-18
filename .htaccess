@@ -1,0 +1,23 @@
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Old permalinks
+RewriteRule ^(.+)/(\d{4})/(\d{2})/(\d{2})/(.+)$ /$1/$5 [R=301,NC,L]
+
+# Old utilties
+RewriteRule ^rss.xml /feed.xml [R=301,NC,L]
+RewriteRule ^atom.xml /feed.xml [R=301,NC,L]
+RewriteRule ^sitemap.txt /sitemap.xml [R=301,NC,L]
+
+# Old permalinks missing categories
+RewriteRule ^2013/07/07/(dying-gigabyte-motherboard) /hardware/$1 [R=301,NC,L]
+RewriteRule ^2013/07/14/(fssh-part-2-tmux-and-vim) /cli/$1 [R=301,NC,L]
+RewriteRule ^2014/04/21/(two-factor-2fa-ssh-authentication-using-yubikey) /security/$1 [R=301,NC,L]
+RewriteRule ^2014/12/12/(gpg-breakage-on-v21) /linux/$1 [R=301,NC,L]
+RewriteRule ^2015/10/01/(rest-in-pieces-lg-optimus-g-aka-e970) /mobile/$1 [R=301,NC,L]
+
+</IfModule>
