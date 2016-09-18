@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "My Wi-Fi access point revisited"
 tagline: "RIP Linksys and Ubiquiti"
 category: linux
 tags: [linux, networking, wifi, ath9k, core]
 ---
-{% include JB/setup %}
 
 
 No more consumer routers!

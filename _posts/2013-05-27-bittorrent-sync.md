@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "BitTorrent Sync"
 tagline: "almost too easy"
 category: sharing
 tags: [sharing, files, p2p, btsync]
 ---
-{% include JB/setup %}
 
 BitTorrent Sync
 ---------------

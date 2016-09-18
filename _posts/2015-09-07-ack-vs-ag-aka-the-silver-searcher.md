@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Ack vs Ag aka The Silver Searcher"
 description: ""
 category: linux
 tags: [linux, ack, ag]
 ---
-{% include JB/setup %}
 
 ## Silver Searcher
 

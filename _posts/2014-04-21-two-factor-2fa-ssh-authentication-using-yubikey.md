@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Two Factor (2FA) SSH Authentication Using YubiKey"
 tagline: "Keeping the baddies out"
 category: 
 tags: [ssh, yubikey, yubico, 2fa, security, linux, arch]
 ---
-{% include JB/setup %}
 
 The Yubikey works by taking an AES-128 encrypted message and sending it Yubico's authentication server.  If the AES private key is stored on Yubico's server and the contents of the encrypted message are validated (counter, serial no, etc) then a verified result is returned, else fail.
 

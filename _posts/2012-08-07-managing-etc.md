@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Managing /etc with etckeeper"
 tagline: "keeping etsy clean"
 category: linux
 tags: [linux, etc, etckeeper, git]
 ---
-{% include JB/setup %}
 
 ## Background on /etc and version control
 

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "VirtualBox NAT is unreliable"
 tagline: "surprise"
 category: osx
 tags: [linux, osx, virtualbox, vm, networking]
 ---
-{% include JB/setup %}
 
 ## Mac OS X + VirtualBox + NAT = Problems
 

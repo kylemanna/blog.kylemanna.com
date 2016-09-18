@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Flash Crashes When Network Interfaces Change"
 tagline: "Docker kills SoundCloud!"
 category: linux
 tags: [linux, docker, flash, crash]
 ---
-{% include JB/setup %}
 
 Boring Story of Discovery
 =========================

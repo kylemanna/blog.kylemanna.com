@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Docker + systemd-network Surprise"
 description: ""
 category: linux
 tags: [arch, systemd, networking, linux]
 ---
-{% include JB/setup %}
 
 ## How'd We Get Here?
 

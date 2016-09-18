@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Deleting Unused Docker Volumes"
 description: ""
 category: linux

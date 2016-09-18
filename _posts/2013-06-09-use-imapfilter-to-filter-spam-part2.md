@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Use imapfilter to filter SPAM - part 2"
 tagline: "howto"
 category: linux
 tags: [spam, spamassassin, imapfilter, imap]
 ---
-{% include JB/setup %}
 
 Update 2013.06.17
 -----------------

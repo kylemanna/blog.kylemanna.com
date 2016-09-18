@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Molex PicoBlade vs JST SH Connectors"
 description: ""
 category: hardware
 tags: [hardware, connectors]
 ---
-{% include JB/setup %}
 
 ## Connector Hunt
 

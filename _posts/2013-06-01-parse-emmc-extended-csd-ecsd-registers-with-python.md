@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Parse eMMC Extended CSD (ECSD) Registers with Python"
 tagline: "sometimes you need to"
 category: linux
 tags: [linux, hardware, emmc, embedded]
 ---
-{% include JB/setup %}
 
 eMMC and Extended CSD Registers
 -------------------------------

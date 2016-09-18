@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "GNOME Keyring Access for Python"
 tagline: "keepin' it secure"
 category: security
 tags: [linux, gnome-keyring, security, python]
 ---
-{% include JB/setup %}
 
 Overview
 --------

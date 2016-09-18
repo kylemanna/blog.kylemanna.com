@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "New Toy: USB Microscope"
 tagline: ""
 category: hardware
 tags: [microscope, usb, pcb, hardware, alibaba, aliexpress]
 ---
-{% include JB/setup %}
 
 ## The Expectation
 

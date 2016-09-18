@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Pragmatic Backups"
 tagline: "in case my apt burns down"
 category: linux
 tags: [ backup, linux, archive, security, sharing. distributed, obnam, btsync ]
 ---
-{% include JB/setup %}
 
 Philosophy
 ==========

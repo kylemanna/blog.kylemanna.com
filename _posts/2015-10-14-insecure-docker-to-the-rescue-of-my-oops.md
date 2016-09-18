@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Docker (in)security to the Rescue"
 description: ""
 category: linux
 tags: [linux, docker, shadow, password, oops, backup]
 ---
-{% include JB/setup %}
 
 ## How Not to Diff Config Files
 

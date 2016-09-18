@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "SSH Reverse Tunnel on Mac OS X"
 tagline: "phone home"
 category: osx
 tags: [ mac, osx, ssh ]
 ---
-{% include JB/setup %}
 
 ## Phone Home
 

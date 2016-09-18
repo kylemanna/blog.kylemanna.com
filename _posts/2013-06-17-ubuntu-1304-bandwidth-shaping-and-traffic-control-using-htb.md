@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Ubuntu 13.04 Bandwidth Shaping and Traffic Control using HTB"
 tagline: "keepin' things fair"
 category: linux
 tags: [linux, ubuntu, qos]
 ---
-{% include JB/setup %}
 
 Problem
 -------

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Boot VirtualBox from USB Drive"
 tagline: ""
 category: linux
 tags: [backup, security, offline, grub, linux, ubuntu, osx, mbr, gpt, efi, virtualbox, vm]
 ---
-{% include JB/setup %}
 
 ## A Story that Turns into a Use Case
 

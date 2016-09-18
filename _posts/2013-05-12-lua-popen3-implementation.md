@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Lua popen3() Implementation"
 tagline: "how does this not exist?"
 category: programming
 tags: [lua, linux]
 ---
-{% include JB/setup %}
 
 Background
 ----------

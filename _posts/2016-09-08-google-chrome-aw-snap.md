@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Google Chrome says Aw, Snap"
 description: ""
 category: linux

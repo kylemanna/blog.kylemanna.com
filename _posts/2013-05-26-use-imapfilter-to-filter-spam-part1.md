@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Use imapfilter to filter SPAM - part 1"
 tagline: "do more then just move messages"
 category: linux
 tags: [spam, spamassassin, imapfilter, imap]
 ---
-{% include JB/setup %}
 
 
 Use Case

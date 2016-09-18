@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "My First Popular Open Source Project"
 tagline: "accidently cool"
 category: linux
 tags: [docker, openvpn, linux, github, digital ocean]
 ---
-{% include JB/setup %}
 
 ## A Pretty Good Idea
 

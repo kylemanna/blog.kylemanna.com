@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Neighborhood Coffee Shop Hands Out IPv6 Addresses"
 description: ""
 category: ipv6
 tags: [ipv6, san francisco, comcast]
 ---
-{% include JB/setup %}
 
 ## Another IPv6 Spotting
 

@@ -1,12 +1,10 @@
 ---
-layout: post
 title: "The smoking gun"
 tagline: "... with a hole in it"
 published: true
 category: cars
 tags: [corvette, cars]
 ---
-{% include JB/setup %}
 
 I found the cause of my blow-by problems.  Piston 7 cracked its ring lands.
 

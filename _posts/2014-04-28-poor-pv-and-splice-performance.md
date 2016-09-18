@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Poor pv and splice() Performance"
 tagline: "slow"
 category: linux
 tags: [linux, pv, kernel, splice, pipeline, pipes]
 ---
-{% include JB/setup %}
 
 While messing around with a number of larger tar archives this past weekend, I noticed that they were obnoxiously slow when piped through pv.  Typically I use [pv](http://www.ivarch.com/programs/pv.shtml) for large operations that can be pipelined so that I can observe progress (or sometimes lack thereof).
 

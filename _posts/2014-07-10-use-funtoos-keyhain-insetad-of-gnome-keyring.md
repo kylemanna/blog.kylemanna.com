@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Use Funtoo's Keychain Instead of GNOME Keyring"
 tagline: "because of missing features"
 category: linux
 tags: [linux, ssh, ssh-agent, keys, keyring, arch]
 ---
-{% include JB/setup %}
 
 ## Why Disable GNOME Keyring?
 

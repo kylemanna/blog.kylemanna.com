@@ -1,12 +1,10 @@
 ---
-layout: post
 title: "A story about a car..."
 tagline: "all great stories start out simple"
 published: true
 category: cars
 tags: [corvette, cars]
 ---
-{% include JB/setup %}
 
 I have been too busy lately to blog about the nerd stuff I hoped to blog about.  Instead, I've been working on my car.  You see, a while back my car suffered a catastrophic failure during a "spirited" pass on my way to work.  My car, a 2002 Electron Blue Corvette, has this thing called a [supercharger](http://en.wikipedia.org/wiki/Supercharger).  The supercharger, while innocent enough, forces more air in to the engine bringing the power from a reasonable 350 HP to about 580 HP -- enough to meet the needs of most people.
 

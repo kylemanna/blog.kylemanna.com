@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Dying Gigabyte Motherboard"
 tagline: "Too red"
 category: 
 tags: [hardware, failure]
 ---
-{% include JB/setup %}
 
 Long Time Coming?
 =================

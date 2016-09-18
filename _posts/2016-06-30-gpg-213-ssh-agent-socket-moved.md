@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "GPG 2.1.3 SSH Agent Socket Moved"
 description: ""
 category: linux
 tags: [gpg, linux]
 ---
-{% include JB/setup %}
 
 ## Why'd my gnupg ssh agent break?
 

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Boot Linux ISOs From USB Sticks Using GRUB"
 tagline: "safe and sound"
 category: linux
 tags: [backup, security, offline, grub, linux, ubuntu, osx, mbr, gpt, efi]
 ---
-{% include JB/setup %}
 
 ## Bootable GRUB2 Emergency Flash Drive
 

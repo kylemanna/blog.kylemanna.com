@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Printers Protecting Users From Themselves"
 description: "Frustrations as a consumer"
 category: hardware
 tags: [printer, epson, fail]
 ---
-{% include JB/setup %}
 
 ## I Like My Printer
 

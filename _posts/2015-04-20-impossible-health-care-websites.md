@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Impossible Health Care Websites"
 description: "Why so difficult?"
 category: irl

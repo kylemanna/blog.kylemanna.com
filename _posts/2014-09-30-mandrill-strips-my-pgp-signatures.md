@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Mandrill Strips My PGP Signatures?"
 tagline: "don't change my mail!"
 category: linux
 tags: [pgp, gpg, mutt, mail, gnupg, chicagovps, vps, mailjet, mandrill]
 ---
-{% include JB/setup %}
 
 ## ChicagoVPS Is Terrible
 

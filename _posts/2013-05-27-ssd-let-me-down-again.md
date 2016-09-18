@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "SSD let me down again"
 tagline: "time to start moving on..."
 category: linux
 tags: [linux, ssd, disk failure]
 ---
-{% include JB/setup %}
 
 This ship is sinking...
 -----------------------

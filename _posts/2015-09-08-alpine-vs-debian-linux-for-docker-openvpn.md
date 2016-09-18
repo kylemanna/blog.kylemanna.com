@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Alpine vs Debian Linux for docker-openvpn"
 description: ""
 category: linux
 tags: [linux, docker, alpine, debian, openvpn, vpn]
 ---
-{% include JB/setup %}
 
 ## Small Docker Images
 

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Samsung 840 EVO SSD + Linux + Firmware Update"
 description: ""
 category: hardware
 tags: [linux, samsung, ssd, firmware, update, error, disk, performance]
 ---
-{% include JB/setup %}
 ## The Problem
 
 A while back I bought a Samsung 840 EVO as it seemed like the best bang for the buck consumer solid state drive.  It has performed flawlessly for almost 2 years.

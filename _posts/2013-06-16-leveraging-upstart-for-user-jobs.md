@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Leveraging Upstart for User Jobs"
 tagline: "not quite systemd, but almost as good"
 category: linux
 tags: [linux, ubuntu, upstart, imapfilter, spam]
 ---
-{% include JB/setup %}
 
 Ubuntu and Upstart
 ------------------

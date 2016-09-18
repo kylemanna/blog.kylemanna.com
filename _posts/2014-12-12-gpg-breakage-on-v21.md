@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "GPG Breakage on v2.1"
 tagline: ""
 category: 
 tags: []
 ---
-{% include JB/setup %}
 
 ## GPG for Backups
 

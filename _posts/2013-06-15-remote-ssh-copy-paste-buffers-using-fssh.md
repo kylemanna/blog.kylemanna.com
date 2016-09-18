@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Remote ssh copy paste buffers using fssh"
 tagline: "close yet far"
 category: linux
 tags: [ssh, fssh, linux, osx]
 ---
-{% include JB/setup %}
 
 Forward SSH
 -----------

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Quick Benchmarks of dm-cache / lvmcache"
 tagline: "caches ftw"
 category: linux
 tags: [dm-cache, linux, cache, ssd, dmsetup, device-mapper, performance, server, disk, lvmcache, lvm]
 ---
-{% include JB/setup %}
 
 ## Quick Benchmarks
 

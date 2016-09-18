@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Time Warner Cable aka RoadRunner TLS and SSL Mail Fail"
 tagline: "ain't nobody got time for that"
 category: security
 tags: [twc, roadrunner, cable]
 ---
-{% include JB/setup %}
 
 The Parents
 -----------

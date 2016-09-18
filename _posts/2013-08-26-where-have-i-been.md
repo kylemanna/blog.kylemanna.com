@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Where have I been?"
 tagline: "AFK"
 category: irl
 tags: [irl, rma, hardware, failure]
 ---
-{% include JB/setup %}
 
 What happened?
 --------------

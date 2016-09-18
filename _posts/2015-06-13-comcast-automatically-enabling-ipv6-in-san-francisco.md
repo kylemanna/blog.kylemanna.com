@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Comcast Automatically Enabling IPv6 in San Francisco"
 description: ""
 category: ipv6
 tags: [ipv6, san francisco, comcast]
 ---
-{% include JB/setup %}
 
 ## Wait What?
 

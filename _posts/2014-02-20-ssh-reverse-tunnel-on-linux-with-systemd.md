@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "SSH Reverse Tunnel on Linux with systemd"
 tagline: "phone home"
 category: linux
 tags: [ linux, archlinux, systemd, ssh ]
 ---
-{% include JB/setup %}
 
 Phone Home
 ----------

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Rest in Pieces LG Optimus G aka e970"
 description: ""
 category: 
 tags: [mobile, android, irl]
 ---
-{% include JB/setup %}
 
 ## Short Story
 

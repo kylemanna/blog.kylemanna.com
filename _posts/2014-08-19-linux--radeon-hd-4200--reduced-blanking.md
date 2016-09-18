@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Linux + Radeon HD 4200 + Reduced Blanking"
 tagline: "Less wasted bandwidth"
 category: linux
 tags: [linux, radeon, amd, ati, timings, modeline]
 ---
-{% include JB/setup %}
 
 ## HDMI Display Timing Adventure
 

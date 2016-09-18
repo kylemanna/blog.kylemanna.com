@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Monitoring systemd and failing services"
 tagline: "Feedback is good"
 category: linux
 tags: [linux, systemd, email, monitor]
 ---
-{% include JB/setup %}
 
 ## No Emails on Failed Tasks?
 

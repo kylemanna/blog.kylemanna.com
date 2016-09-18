@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "DigitalOcean SFO1 vs SFO2"
 description: ""
 category: cloud

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Linux SSD caching part 2"
 tagline: "faster is better"
 category: linux
 tags: [cache, linux, core, performance, disk, server, ssd, dm-cache]
 ---
-{% include JB/setup %}
 
 Musings with dm-cache
 ---------------------

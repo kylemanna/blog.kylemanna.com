@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Samsung 840 EVO SSD TRIM Support Blacklisted After Firmware Upgrade"
 description: ""
 category: hardware
 tags: [linux, samsung, ssd, firmware, update, error, disk, performance]
 ---
-{% include JB/setup %}
 
 ## Firmware Upgrade Gone Wrong
 

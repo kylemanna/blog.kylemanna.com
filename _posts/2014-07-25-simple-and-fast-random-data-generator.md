@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Simple and Fast Random Data Generator"
 tagline: "OpenSSL PRNG"
 category: linux 
 tags: [openssl, linux, crypto, test]
 ---
-{% include JB/setup %}
 
 # Issue
 

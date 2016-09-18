@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Thoughts on Medium"
 description: ""
 category: blog
 tags: [blogging, blog, medium, content]
 ---
-{% include JB/setup %}
 
 Once upon a time I thought I’d start my personal blog. I thought I’d blog mostly on random tech stuff as a journal and then every now and then some “real life stuff” aka IRL. The reasoning was that I also found other tech people’s blogs fascinating. It showed me that they weren’t just a commit in a git repo, but that they had opinions, hobbies and dreams. I like that, and wanted the same. What I didn’t want to do was spend tons of time relearning HTML and CSS since the Web 2.0 world passed me by years ago.
 

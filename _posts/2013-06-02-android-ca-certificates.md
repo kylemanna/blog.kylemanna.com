@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Android CA Certificates"
 tagline: "where to put it"
 category: android
 tags: [linux, android, openssl, certificates]
 ---
-{% include JB/setup %}
 
 Use Case
 --------

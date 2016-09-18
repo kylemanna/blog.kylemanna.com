@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Cinnamon to GNOME 3"
 description: ""
 category: linux
 tags: [linux, cinnamon, gnome]
 ---
-{% include JB/setup %}
 
 ## Cinnamon Was Crampin' My Style
 

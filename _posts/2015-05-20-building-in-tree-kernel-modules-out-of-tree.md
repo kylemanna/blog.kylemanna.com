@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Building In Tree Kernel Modules Out of Tree"
 description: ""
 category: linux
 tags: [linux, arch, aur, kernel, pkgbuild]
 ---
-{% include JB/setup %}
 
 ## Don't Rebuild the Entire Kernel
 

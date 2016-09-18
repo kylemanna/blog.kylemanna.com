@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Using Native IPv6 via Comcast in San Francisco"
 tagline: "go native"
 category: ipv6
 tags: [ubuntu, linux, ipv6, comcast, san francisco]
 ---
-{% include JB/setup %}
 
 What is IPv6?
 =============

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Start OpenOCD on USB hotplug"
 description: ""
 category: hardware

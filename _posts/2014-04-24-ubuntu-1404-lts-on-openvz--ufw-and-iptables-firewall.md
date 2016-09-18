@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Ubuntu 14.04 LTS on OpenVZ + ufw and iptables Firewall"
 tagline: "ufw drama"
 category: linux
 tags: [linux, vps, openvz, ufw, iptables]
 ---
-{% include JB/setup %}
 
 I upgraded my P.O.S. OpenVZ VPS (KVM from now on...) from Ubuntu 12.04.4 LTS to 14.04 LTS today and ran in to some problems with the firewall rules.  Every time I'd reboot the VPS, it would to setup all the firewall rules setup by ufw, most notably the application allow rules (ie ssh) and the INPUT chain policy.  Kind of dangerous.
 

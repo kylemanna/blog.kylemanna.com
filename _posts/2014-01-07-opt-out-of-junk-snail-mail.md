@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Opt-out of Junk Snail Mail"
 tagline: ""
 category: irl
 tags: [irl, junk mail, spam]
 ---
-{% include JB/setup %}
 
 Physical Junk Mail
 ------------------
