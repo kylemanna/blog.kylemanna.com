@@ -1,7 +1,7 @@
 ---
 title: "FSSH part 2: Tmux and Vim"
 tagline: "sync it"
-category: 
+category: cli
 tags: [ linux, osx, tmux, bash, ssh, fssh ]
 ---
 

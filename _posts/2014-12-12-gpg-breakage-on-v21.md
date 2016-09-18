@@ -1,8 +1,8 @@
 ---
 title: "GPG Breakage on v2.1"
 tagline: ""
-category: 
-tags: []
+category: linux
+tags: [security, gpg, crypto]
 ---
 
 ## GPG for Backups

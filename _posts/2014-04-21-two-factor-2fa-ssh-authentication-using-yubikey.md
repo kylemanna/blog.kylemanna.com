@@ -1,7 +1,7 @@
 ---
 title: "Two Factor (2FA) SSH Authentication Using YubiKey"
 tagline: "Keeping the baddies out"
-category: 
+category: security
 tags: [ssh, yubikey, yubico, 2fa, security, linux, arch]
 ---
 

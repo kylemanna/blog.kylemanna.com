@@ -1,7 +1,7 @@
 ---
 title: "Rest in Pieces LG Optimus G aka e970"
 description: ""
-category: 
+category: mobile
 tags: [mobile, android, irl]
 ---
 

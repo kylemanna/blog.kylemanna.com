@@ -1,7 +1,7 @@
 ---
 title: "Dying Gigabyte Motherboard"
 tagline: "Too red"
-category: 
+category: hardware
 tags: [hardware, failure]
 ---
 
