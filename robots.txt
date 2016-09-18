@@ -1,0 +1,5 @@
+Sitemap: https://blog.kylemanna.com/sitemap.xml
+
+User-agent: *
+Disallow: /cgi-bin/
+
