@@ -169,7 +169,11 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+#permalink: /:categories/:title/
+permalink: /:categories/:year/:month/:day/:title/
+# Todo: migrate to more sensible permalink structure
+# - Figure out how to do 301 redirects sensibly
+# - Figure out hwo to move disqus comments
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
