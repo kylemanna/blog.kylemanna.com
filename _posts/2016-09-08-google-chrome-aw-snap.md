@@ -1,8 +1,13 @@
 ---
 title: "Google Chrome says Aw, Snap"
-description: ""
+excerpt: "How I workaround Google Chrome's memory fragmentation problem on Linux"
 category: linux
 tags: [linux, chrome, chromium, google]
+header:
+  image: https://i.imgur.com/sebgnJ7.png
+  overlay_color: "#000"
+  overlay_filter: "0.7"
+  overlay_image: https://i.imgur.com/sebgnJ7.png
 ---
 
 ## Aw, Snap!
