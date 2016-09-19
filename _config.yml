@@ -6,11 +6,11 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en"
+locale                   : "en_US"
 title                    : "Bootloader Blog"
 title_separator          : "-"
 name                     : "Kyle Manna"
-description              : "Kyle Manna's personal blog covering embedded systems, Linux and sometimes entrepreneurship"
+description              : "Kyle Manna's personal blog covering embedded systems, Linux and entrepreneurship."
 url                      : "https://blog.kylemanna.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -55,12 +55,12 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : 2bluesc
+  username               : "2bluesc"
 facebook:
-  username               : 2bluesc
+  username               : "2bluesc"
   app_id                 : 1699938753662885
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "https://blog.kylemanna.com/images/splash-pcb-kernel-driver_1200x630.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
