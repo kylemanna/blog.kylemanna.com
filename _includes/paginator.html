@@ -44,7 +44,7 @@
           {% comment %} Distance must be a positive value {% endcomment %}
           {% assign dist = 0 | minus: dist %}
         {% endif %}
-        <li><a href="{{ base_path }}/page{{ index }}/">{{ index }}</a></li>
+        <li><a href="{{ base_path }}/page/{{ index }}/">{{ index }}</a></li>
       {% endif %}
     {% endfor %}
 
@@ -56,7 +56,7 @@
     {% if paginator.page == paginator.total_pages %}
       <li><a href="#" class="disabled current">{{ paginator.page }}</a></li>
     {% else %}
-      <li><a href="{{ base_path }}/page{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a></li>
+      <li><a href="{{ base_path }}/page/{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a></li>
     {% endif %}
 
     {% comment %} Link next page {% endcomment %}
