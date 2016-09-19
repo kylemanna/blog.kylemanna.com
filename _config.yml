@@ -60,7 +60,7 @@ facebook:
   username               : "2bluesc"
   app_id                 : 1699938753662885
   publisher              :
-og_image                 : "https://blog.kylemanna.com/images/splash-pcb-kernel-driver_1200x630.jpg"
+og_image                 : "splash-pcb-kernel-driver_1200x630.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
