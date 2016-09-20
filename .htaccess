@@ -33,3 +33,11 @@ RewriteRule ^sitemap.txt /sitemap.xml [R=301,NC,L]
 RewriteRule ^tags.html /tags/ [R=301,NC,L]
 
 </IfModule>
+
+
+# Primarily for CloudFlare
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access 8 days"
+ExpiresByType text/html "access 1 hour"
+</IfModule>
