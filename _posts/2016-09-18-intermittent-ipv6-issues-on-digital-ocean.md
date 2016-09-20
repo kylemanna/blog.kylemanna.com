@@ -14,7 +14,7 @@ header:
 
 The other day I was setting up a [Digital Ocean Droplet](https://m.do.co/c/d19f7fe88c94) for a project with IPv6 and CloudFlare. After getting all the initial services setup, I decided to lock it down with `ip6tables`.  I setup some rules like I had on other machines to let obvious things through, tested it and moved on.
 
-However, my ssh connection were very flaky and would have periodic lag followed by smoother operation.  The webserver *seemed* fine because CloudFlare was helping to mask my IPv6 problem I had inadvertently buried in my configuration.
+However, my ssh connections were very flaky and would have periodic lag followed by flawless operation.  The webserver *seemed* fine because CloudFlare was helping to mask my IPv6 problem I had inadvertently buried in my configuration.
 
 I began to troubleshoot and realized IPv4 was operating flawlessly and IPv6 only acted up when I turn on basic IPv6 rules.  Further investigation showed that http was just as sporadic as ssh when I removed CloudFlare from the picture.
 
