@@ -4,10 +4,10 @@ excerpt: "How to fix sporadic IPv6 connection issues due to ip6tables misconfigu
 category: linux
 tags: [linux, digital ocean, ipv6]
 header:
-  image: http://i.imgur.com/IJ91A3p.png
+  image: https://i.imgur.com/IJ91A3p.png
   overlay_color: "#000"
-  overlay_filter: "0.7"
-  overlay_image: http://i.imgur.com/IJ91A3p.png
+  overlay_filter: "0.5"
+  overlay_image: https://i.imgur.com/IJ91A3p.png
 ---
 
 ## Locked Down and Out with IPv6
