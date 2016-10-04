@@ -13,7 +13,7 @@ The JST SH series hit all my requirements and were available in surface mount pa
 
 ## Initial Concerns
 
-I was initially concerned about the terminals being too small to work with for prototype work.  I dug around the Internet and found some people saying they were too small and a few saying they were workable with the [$40 Engineer PA-09](http://amzn.to/1WqWht0) from Amazon.  For the price I figured why not.  So I took the plunge, ordered the crimp tool and made my boards to use the JST SH surface mount connectors.
+I was initially concerned about the terminals being too small to work with for prototype work.  I dug around the Internet and found some people saying they were too small and a few saying they were workable with the [$40 Engineer PA-09](https://www.amazon.com/Engineer-PA-09-Micro-Connector-Crimpers/dp/B002AVVO7K) from Amazon.  For the price I figured why not.  So I took the plunge, ordered the crimp tool and made my boards to use the JST SH surface mount connectors.
 
 And then reality caught up with me
 
@@ -25,14 +25,14 @@ I wasted 20+ terminals trying to crimp 7 wires, which then failed later.  Double
 
 ## Search for an Alternative
 
-I poke around the Internet and stumbled on the [Molex PicoBlade 1.25 mm series](http://amzn.to/1SM4rGX) before getting confirmation from a few friends that used them without issue.  A friend had the very nice and [$300  Molex crimper #63819-0300](http://amzn.to/1SylXOz).  And the crimps were perfect.  Not exactly surprising given the fact that the crimper is 10x the price.  That said, the only crimp tool for the JST SH connectors I could find was the [YRS-850 for $1100 on Digi-Key](http://www.digikey.com/product-search/en?mpart=YRS-859&vendor=455).  Forget that.
+I poke around the Internet and stumbled on the [Molex PicoBlade 1.25 mm series](http://www.molex.com/product/picoblade.html) before getting confirmation from a few friends that used them without issue.  A friend had the very nice and [$300  Molex crimper #63819-0300](http://www.digikey.com/product-search/en?keywords=WM9984-ND).  And the crimps were perfect.  Not exactly surprising given the fact that the crimper is 10x the price.  That said, the only crimp tool for the JST SH connectors I could find was the [YRS-850 for $1100 on Digi-Key](http://www.digikey.com/product-search/en?mpart=YRS-859&vendor=455).  Forget that.
 
 ## Bonus
 
 After adopting the PicoBlade I fell in love with them for a number of other reasons:
 
 * Through hole *and* surface mount receptacles. JST SH are surface mount only.
-* Wire gauge of 26-32 AWG vs 28-32 AWG.  Finding [26 AWG stranded wire](http://amzn.to/1NnFmQW) is considerably easier when [prototyping](https://www.adafruit.com/categories/472).
+* Wire gauge of 26-32 AWG vs 28-32 AWG.  Finding [26 AWG stranded wire](https://www.amazon.com/Remington-Industries-26UL1007STRKIT-Stranded-Diameter/dp/B00N51OOJE/) is considerably easier when [prototyping](https://www.adafruit.com/categories/472).
 * Pre-crimped wires in two lengths to skip crimping all together.  These appear harder to source then the rest of the series components.
 * Optional wire-to-wire housings.
 * Visibly larger contact area for slightly higher current handling and perhaps better reliability.
@@ -45,3 +45,5 @@ After adopting the PicoBlade I fell in love with them for a number of other reas
 I took some quick pictures of my JST SH <-> Molex PicoBlade adapter.
 
 [![Connector Image](https://i.imgur.com/4OgHyJ5l.jpg)](https://imgur.com/a/VqOvI)
+
+[Checkout the Imgur image gallery](https://imgur.com/a/VqOvI)
