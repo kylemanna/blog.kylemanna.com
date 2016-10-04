@@ -12,9 +12,9 @@ header:
 
 ## Keeping Track of Problems
 
-While wrestling around with setting up failure event tracking for a new server using systemd and my [onfailure hack](/linux/monitoring-systemd-and-failing-services/) I was reminded of [Papertrail](https://papertrailapp.com).  On a past project we used Papertrail to aggregate logs until we out grew it moved to the ELK stack.
+While wrestling around with setting up failure event tracking for a new server using systemd and my [onfailure hack](/linux/monitoring-systemd-and-failing-services/) I was reminded of [Papertrail](https://papertrailapp.com).  On a past project we used Papertrail to aggregate logs until we out grew it and moved to the ELK stack.
 
-In the interest of keeping things simple I figured I could just funnel all my logs from Arch, Ubuntu and Raspbian (aka Debian) cloud servers and real boxes to the Papertrail cloud and setup alerts using their free service tier.  
+In the interest of keeping things simple I figured I could just funnel all my logs from Arch Linux, Ubuntu and Raspbian (aka Debian) cloud servers and real boxes to the Papertrail cloud and setup alerts using their free service tier.
 
 Before committing to that, I poked around a bit to determine if Papertrail was still the best option.
 
@@ -91,7 +91,7 @@ A recent version of rsyslog with Keep-Alive support is needed to avoid dropped c
 
 ### Step 3 - Configure rsyslog
 
-This is where the headache begins and differs by distro. 
+This is where the headache begins and differs by distro.
 
 Install the certificate bundle:
 
@@ -109,7 +109,7 @@ On Debian based distributions it's probably as simple as adding a file at `/etc/
            KeepAlive="on" KeepAlive.Time="600"
            StreamDriver="gtls" StreamDriverMode="1" StreamDriverAuthMode="x509/name"
            StreamDriverPermittedPeers="*.papertrailapp.com")
-    
+
 Update the `Target` and `Port` as appropriate, restart rsyslog and hopefully everything works:
 
     sudo systemctl restart rsyslog
