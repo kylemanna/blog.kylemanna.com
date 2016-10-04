@@ -12,7 +12,7 @@ header:
 
 ## Keeping Track of Problems
 
-While wrestling around with setting up failure event tracking for a new server using systemd and my [onfailure hack](/linux/monitoring-systemd-and-failing-services/) I was reminded of [Papertrail](https://papertrailapp.com).  On a past project we used Papertrail to aggregate logs until we out grew it and moved to the ELK stack.
+While wrestling around with setting up failure event tracking for a new server using systemd and my [onfailure hack](/linux/monitoring-systemd-and-failing-services/) I was reminded of [Papertrail](https://papertrailapp.com/?thank=384510).  On a past project we used Papertrail to aggregate logs until we out grew it and moved to the ELK stack.
 
 In the interest of keeping things simple I figured I could just funnel all my logs from Arch Linux, Ubuntu and Raspbian (aka Debian) cloud servers and real boxes to the Papertrail cloud and setup alerts using their free service tier.
 
@@ -29,7 +29,7 @@ High level requirements:
 
 ### Papertrail
 
-I had a good experience with [Papertrail](https://papertrailapp.com) in the past.  Their support was quick and practical on a past paid servce.  The free service would cover my modest personal requirements.  Tailing the logs from their web UI is fast an efficient, log entries arrive to my browser in under a second.  The free service plan includes up to 48 hours of search and 7 day archive which seems like plenty for my needs.
+I had a good experience with [Papertrail](https://papertrailapp.com/?thank=384510) in the past.  Their support was quick and practical on a past paid servce.  The free service would cover my modest personal requirements.  Tailing the logs from their web UI is fast an efficient, log entries arrive to my browser in under a second.  The free service plan includes up to 48 hours of search and 7 day archive which seems like plenty for my needs.
 
 Furthermore, the plans are reasonable at $7/mo for the next step on my personal project servers.  Other services have a much bigger first step.
 
