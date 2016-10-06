@@ -36,7 +36,7 @@
 
     {% for index in (page_start..page_end) %}
       {% if index == paginator.page %}
-        <li><a href="{{ base_path }}/page{{ index }}/" class="disabled current">{{ index }}</a></li>
+        <li><a href="{{ base_path }}/page/{{ index }}/" class="disabled current">{{ index }}</a></li>
       {% else %}
         {% comment %} Distance from current page and this link {% endcomment %}
         {% assign dist = paginator.page | minus: index %}
