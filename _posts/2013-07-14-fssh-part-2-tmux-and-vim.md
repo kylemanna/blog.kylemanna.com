@@ -20,7 +20,7 @@ My Public dot-files
 
 I started a public [Github repo for my dot-files](https://github.com/kylemanna/dot-files), in this repo are a few files that provide the functionality I'm going to talk about in the following sections:
 
-* [bash_env.sh](https://github.com/kylemanna/dot-files/blob/master/.bash_env.sh) - Functions to aid in cross shell invocation environment caching.
+* [shell_env.sh](https://github.com/kylemanna/dot-files/blob/master/.shell_env.sh) - Functions to aid in cross shell invocation environment caching.
 * [vimrc](https://github.com/kylemanna/dot-files/blob/master/.vimrc) - Adds key bindings for ui_copy and ui_paste from fssh.
 * [tmux.conf](https://github.com/kylemanna/dot-files/blob/master/.tmux.conf) - Adds key bindings for ui_copy and ui_paste from fssh.
 
