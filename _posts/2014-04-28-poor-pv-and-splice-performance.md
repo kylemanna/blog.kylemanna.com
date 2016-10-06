@@ -7,7 +7,7 @@ tags: [linux, pv, kernel, splice, pipeline, pipes]
 
 While messing around with a number of larger tar archives this past weekend, I noticed that they were obnoxiously slow when piped through pv.  Typically I use [pv](http://www.ivarch.com/programs/pv.shtml) for large operations that can be pipelined so that I can observe progress (or sometimes lack thereof).
 
-# Overview
+## Overview
 
 For those not familiar, pv provides insight in to the progress of operations, for instance compressing a tar archive:
 
@@ -17,7 +17,7 @@ For those not familiar, pv provides insight in to the progress of operations, fo
 
 Usually I run it with no arguments as the default is pretty good and have used it for years.
 
-# Problem
+## Problem
 
 The simplest way to demonstrate the problem is to read data through two pipes and throw it away.  The splice() functionality appears to cause a significant performance hit on my Arch Linux workstation.
 
@@ -53,7 +53,7 @@ Try this again without splice():
 
 Now performance is better, but this seems odd?  The splice() option should improve performance, how come disabling it improved performance?
 
-# Real-World
+## Real-World
 
 My observation occurred with manipulating tar archives and compressing them.  Here's an example working with a recent kernel archive:
 

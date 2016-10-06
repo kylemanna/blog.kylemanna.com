@@ -5,7 +5,7 @@ category: linux
 tags: [openssl, linux, crypto, test]
 ---
 
-# Issue
+## Issue
 
 I was testing out some new harddrives and wanted to fill them with random data.  To avoid any filesystem or disk controller optimizations I wanted to ensure that no de-duping would be possible.
 
@@ -29,7 +29,7 @@ Meanwhile, `/dev/zero` is insanely fast, but likely to be de-duped or compressed
 
 Ideally, I'd get something fast enough to saturate the disks (150 MB/s - 500 MB/s)
 
-# How about Encryption?
+## How about Encryption?
 
 Lets read zeros for the hell of it, and then rely on OpenSSL to take a weak password, salt it and then send us the encrypted output which might as well be pseudo-random data.  Benchmark:
 

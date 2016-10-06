@@ -5,8 +5,7 @@ category: linux
 tags: [linux, docker, flash, crash]
 ---
 
-Boring Story of Discovery
-=========================
+## Boring Story of Discovery
 
 I happened to be listening to a [SoundCloud](https://soundcloud.com) podcast while working on a Docker image.  At first the stream just seemed to be dropping for no apparent reason.  Closer investigation shows that *everytime* I did `docker run` or exited the container the stream would drop.  What?!  How is Docker related to my Chrome web browser on Arch Linux?!
 
@@ -23,8 +22,7 @@ Back to docker, try to avoid creating network interfaces:
 BOOM! No more crashing.  Flash is crashing everytime Docker creates veth network interfaces for my containers. Or at least tripping up the SoundCloud flash app.
 
 
-Unexciting Fix
-==============
+## Unexciting Fix
 
 Dug through the [SoundCloud Extra Settings](http://soundcloud.com/settings/extra) and clicked "HTML5 Audio" under "Experimental Features".
 

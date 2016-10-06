@@ -5,8 +5,7 @@ category: linux
 tags: [ backup, linux, archive, security, sharing. distributed, obnam, btsync ]
 ---
 
-Philosophy
-==========
+## Philosophy
 
 [World backup day](http://www.worldbackupday.com/) is March 31st, and while running <code>obnam fsck</code> on my remote backups I re-visited by backup strategy. In order to backup my data successfully, I need to first define what I'm trying to protect myself from.
 
@@ -39,8 +38,7 @@ Hard drives physically fail.  RIP mechanical hard drives.  Some [SSDs are just f
 
 My apartment has never burnt down.  My backup hard drives (or computer itself) were never stolen.  I assume it could happen though and must hedge against it.
 
-Defining Tiers
-==============
+## Defining Tiers
 
 To assign value to different sets of data, I assign the data to a tier
 
@@ -142,8 +140,7 @@ Note the frequency the incremental data is kept.  Daily backups for the last wee
 
 I have two minor issues with obnam. First, when I run <code>obnam fsck</code> it complains that I have unlinked/orphaned chunks that it currently doesn't clean-up.  I assume these are from interrupted backups. Secondly, I don't understand why the data backup sizes and file counts are different between the servers, potentially due to the orphaned chunks?
 
-Evolution
-=========
+## Evolution
 
 I'd like to find a solution that lets me backup more data in Tier 2 and possibly merge Tier 2 and 3 if I can find a remote solution that would let me cost effectively store that much data.  That's a problem for another day.
 

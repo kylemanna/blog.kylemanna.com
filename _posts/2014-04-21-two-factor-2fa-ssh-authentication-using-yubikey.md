@@ -15,8 +15,7 @@ At the same time, if the user elects to use a ssh private key (think automation)
 
 These are my brief notes on my YubiKey authentication setup on Arch Linux.
 
-Prerequisites
-=============
+## Prerequisites
 
 * A physical YubiKey, I have the YuibKey Standard.  Thinking about a Neo.
   * YubiKey is configured for Yubico OTP which is the default for slot 1 (aka short press).
@@ -28,8 +27,7 @@ Prerequisites
       yaourt yubico-pam-git
 
 
-System Modifications
-====================
+## System Modifications
 
 These steps were run on an Arch Linux machine and are likely slightly different for every other distro.
 
@@ -51,8 +49,7 @@ These steps were run on an Arch Linux machine and are likely slightly different 
 4. Whenever configuring PAM, verify that security isn't broken.  Try typing no password, wrong password, with/without YubiKey, with/without authorized_yubikeys file, with invalid entry in authorized_yubikeys file.  Also be cautious of ssh multiplexing (connection sharing) as it may skip authentication and re-use / multiplex an existing connection.  This could be misleading.
 
 
-Debugging
-=========
+## Debugging
 
 If the above steps don't work, turn on debugging:
 
@@ -71,15 +68,13 @@ If the above steps don't work, turn on debugging:
 4. Disable debugging by removing the debug option and removing the log file.
 
 
-Documentation
-=============
+## Documentation
 
 * Man page: <code>man pam_yubico</code>
 * Documentation: [yubico-pam wiki](https://github.com/Yubico/yubico-pam/wiki)
 
 
-Security Implications
-=====================
+## Security Implications
 
 ### Compromising the Added Security
 

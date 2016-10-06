@@ -5,8 +5,7 @@ category: ipv6
 tags: [ubuntu, linux, ipv6, comcast, san francisco]
 ---
 
-What is IPv6?
-=============
+## What is IPv6?
 
 IPv6 is the next generation Internet protocol with a *significantly* larger address space (among other things) when compared with IPv4.  [Google](http://lmgtfy.com/?q=ipv6) is your friend and [Wikipedia](http://en.wikipedia.org/wiki/IPv6) has an article as well if you don't already know what IPv6 is.
 
@@ -14,8 +13,7 @@ Poking around the Internet is sure to yield some dramatic blog articles on just 
 
 [![Speedtest Results](http://stage.results.speedtest.comcast.net/result/319941604.png)](http://ipv6.speedtest.comcast.net/)
 
-My Goals
-========
+## My Goals
 
 I want to talk about using IPv6 natively (that is no dependence on tunnels over IPv4 networks) with Comcast Internet in San Francisco, CA.
 
@@ -24,32 +22,27 @@ I want to talk about using IPv6 natively (that is no dependence on tunnels over 
 * How to break-up the PD and allocate a subnet to internal networks (WLAN and LAN) to and from the Internet without NAT.
 * How to use iptables to secure the newly routed and exposed networks.
 
-IPv6 Basics
-===========
+## IPv6 Basics
 
 There are some details of IPv6 that are radically different from IPv4 and took me a while to understand.
 
-Subnets
--------
+### Subnets
 
 The subnets on IPv6 are all at least /64 networks.  Everything.  Even link-local interfaces where only 2 address are in use.  At first this seems like a colossal waste of the address space, but the address space is in fact insanely large.  It's also generally bad practice to attempt to subnet anything larger then a /64 prefix.  This is because of the way Stateless Address Autoconfiguration (SLAAC) works and assumes /64 subnets.  I tried to use smaller subnets until I learned what was really going on.  Don't make subnets smaller then /64, it's a lost cause unless you have a *really* good reason.
 
-Stateless Address Autoconfiguration
------------------------------------
+### Stateless Address Autoconfiguration
 
 Stateless Address Autoconfiguration works by discovering neighbors and routers and picking an address automatically based on the prefix of the network and a few other things such as the interface's MAC address (there are privacy extensions to avoid this).  This means that a DHCPv6 server isn't strictly required for automatic IP address configuration.  Router advertisements are necessary for getting the default gateway and DNS information.  I'll explain how to set all of this up in a bit.
 
 If auto configuration doesn't suit your needs, DHCPv6 is available for more advanced setups.  You should probably have a good reason for needing a DHCPv6 server (like handing out prefix delegations and pretending to be an ISP).
 
-Prefix Delegations
-------------------
+### Prefix Delegations
 
 With the significant increase in address space there is no need to use NAT as was previously the case with IPv4, especially for home users.  To do this, ISPs need to hand out a subnet prefix to each of their clients so their clients can then split up the prefix and create their own subnets for their internal networks.  Oh yeah, and handle all the routing table management that comes with it.
 
 Do request a prefix, it's merely an option your DHCPv6 client passes to your ISP's DHCPv6 servers.  If the ISP's DHCPv6 server is configured correctly, then you will get a prefix.  The recommended prefix size is /48 (That's huge, 2^80 addresses!!). Unfortunately, most consumer ISPs don't do that.  In my case, Comcast hands out a /60 prefix which is good enough for me and will let me create 16 ( 2^4 ) /64 subnets, currently I use one for WLAN and one for LAN.  Details on the setup later.
 
-Network Address Translation (NAT)
----------------------------------
+### Network Address Translation (NAT)
 
 There is no NAT as there was with IPv4.  The address your computer uses inside your network is the same any other host on the Internet can use.  This of course has security implications because most people have been using NAT as a sorry excuse for a proper "firewall".  The solution for this is to setup a firewall with stateful filtering at the IPv6 gateway to prevent poorly internal machines from getting attacked.
 
@@ -57,8 +50,7 @@ As a side-effect, port forwarding is no longer necessary to bypass NAT.
 
 The Internet is becoming a better place without NAT and port forwarding.
 
-My Network
-==========
+## My Network
 
 Before I get started with how to setup your network, it's important to understand how my network works.  My router and firewall machine runs Linux and is attached to three networks:
 
@@ -66,8 +58,7 @@ Before I get started with how to setup your network, it's important to understan
 2. LAN on br0
 3. WLAN on wlan0
 
-Request An IPv6 Address
-=======================
+## Request An IPv6 Address
 
 Change a few things so that IPv6 works by modifying sysctl options, I use ufw's <code>/etc/ufw/sysctl.conf</code>, add the following:
 
@@ -141,16 +132,14 @@ At this point you should be able to ping Google's IPv6 page from the gateway:
 
 If the gateway is running a javascript enabled browser then, checkout [test-ipv6](http://test-ipv6.com/), if not, curl or wget [ipv6.google.com](http://ipv6.google.com).  Congratulations, things are working.
 
-Setup the Internal Networks on the IPv6
-=======================================
+## Setup the Internal Networks on the IPv6
 
 There are two steps to getting your internal networks online:
 
 1. Setup dnsmasq (or radvd) to advertise the subnet, gateway, and DNS servers.
 2. Configure ip6tables to play along.
 
-Configure dnsmasq
------------------
+### Configure dnsmasq
 
 I already use dnsmasq for my existing IPv4 networks as it's simple and lightweight as DHCP, DNS, and TFTP server.  The latest version (I'm using 2.65-1ubuntu1) adds support for handing prefix delegations elegantly with the IPv6 "constructor" option.  Many other tutorials on the Internet are using radvd, but I prefer dnsmasq as I can kill 3 birds (IPv4/IPv6 DNS, DHCPv4, DHCPv6) with one stone.
 
@@ -175,8 +164,7 @@ When configured this way, it's worth noting that the prefix is not hardcoded in 
 
 If this didn't work, check out <code>/var/log/syslog</code> for entries from dnsmasq about what's wrong.
 
-Attempt to Configure Iptables
------------------------------
+### Attempt to Configure Iptables
 
 Iptables must allow traffic to be forwarded for IPv6 to work.  By default Ubuntu (and ufw) don't allow this.
 
@@ -195,15 +183,13 @@ These rules will allow all traffic outgoing traffic originating from from my WLA
 
 It's assumed that default forward policy is to DROP.  If this isn't the case, then your IPv6 subnets maybe be unprotected.
 
-Test It Out
------------
+### Test It Out
 
 Plug in a client that supports IPv6.  It should get an IPv6 address or two and IPv6 DNS server.  On my Macbook Pro this just worked -- much to my amazement.
 
 If everything went really well then the host should be able to load [http://test-ipv6.com](http://test-ipv6.com) and <code>ping6 google.com</code>.
 
-Next Steps
-==========
+## Next Steps
 
 * Test your IPv6 firewall: [http://ipv6.chappell-family.com/ipv6tcptest/](http://ipv6.chappell-family.com/ipv6tcptest/)
 * Run an IPv6 speedtest: [http://ipv6.speedtest.comcast.net/](http://ipv6.speedtest.comcast.net/)
