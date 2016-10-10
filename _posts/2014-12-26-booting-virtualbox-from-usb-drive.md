@@ -9,7 +9,7 @@ tags: [backup, security, offline, grub, linux, ubuntu, osx, mbr, gpt, efi, virtu
 
 While doing some year-end back up and archiving I had to reconsider my use of [TrueCrypt given the announcement](https://en.wikipedia.org/wiki/TrueCrypt#End_of_life_announcement) this past year.  Do I really need TrueCrypt and cross platform support for my cold storage of GPG keys and Bitcoin wallets if I use Linux 90% of the time?  Maybe not, maybe I can just use LUKS which is very popular and less suspect these days.
 
-If I'm going to use LUKS, then I want to prove to myself that I can access it from Windows or Mac OS X if I need to.  The question was raised: Can I boot from my [Bootable GRUB2 Emergency Flash Drive](../../22/boot-linux-isos-from-usb-sticks-using-grub) using VirtualBox?  And so the use case was born.
+If I'm going to use LUKS, then I want to prove to myself that I can access it from Windows or Mac OS X if I need to.  The question was raised: Can I boot from my [Bootable GRUB2 Emergency Flash Drive](/linux/boot-linux-isos-from-usb-sticks-using-grub/) using VirtualBox?  And so the use case was born.
 
 Turns out it was semi easy to do.
 
