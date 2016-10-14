@@ -29,16 +29,18 @@ Pretty anticlimactic actually.  No data was lost going from `EXT0AB0Q` to `EXT0D
 
 ## Testing
 
-I did some quick before and after tests using (GNOME Disks Utility](https://wiki.gnome.org/Design/Apps/Disks).  There was a noticeable performance improvement in consistency of the device, but a slight average throughput decrease.
+I did some quick before and after tests using [GNOME Disks Utility](https://wiki.gnome.org/Design/Apps/Disks).  There was a noticeable performance improvement in consistency of the device, but a slight average throughput decrease.
 
-There is a [mess of images onthe before and after results were quite repeatable with the for people more interested in performance details.  Note the firmware version, partition and sample size in the screenshots.
+The before and after results were quite repeatable with the for people more interested in performance details.  Note the firmware version, partition and sample size in the screenshots.
 
-The most significant improve is visible here.  The first image is before the image update and the second one is after (surprise!).
-![Before](https://i.imgur.com/9QiLcyjl.png) ![After](https://i.imgur.com/H9oCZqWl.png)
+The most significant improvement is visible in the following screenshots.  The first image is before the firmware update and the second image is after the firmware update (surprise!).
+![Before](https://i.imgur.com/9QiLcyjl.png)
+
+![After](https://i.imgur.com/H9oCZqWl.png)
 
 For this partition, a rarely used 14% full 124GB btrfs partition, the first 20% of the partition had volatile throughput performance.  The before and after results were quite repeatable with and more tests can be found on [Imgur](http://bit.ly/1DLT6yr).  The latency was all over across tests since the disk partially in use by some background tasks in Linux, but largely unchanged by the update.  I speculate that the volatile performance is in the region of the disk where data is actually stored, the numbers seem to make sense.
 
-It's worth noting that the peak performance did decrease a little bit: 385 MB/s -> 375 MB/s.
+It's worth noting that the average performance did decrease a slightly: 385 MB/s -> 375 MB/s.
 
 ## Problems?
 
@@ -65,10 +67,10 @@ Time to double check that my daily back-ups are operating as expected.
 
 ## Update 2015.05.09
 
-Currently my system generates sporadic timeout errors.  I've abandoned the hope that a background firmware task was doing something and would pass.  I've now re-mounted all my filesystems (btrfs and ext4) without the `discard` flag I was using before.  There's a chance this is the smoking gun as I've [seen this before](/linux/2013/05/05/ssd-trim/).
+Currently my system generates sporadic timeout errors.  I've abandoned the hope that a background firmware task was doing something and would pass.  I've now re-mounted all my filesystems (btrfs and ext4) without the `discard` flag I was using before.  There's a chance this is the smoking gun as I've [seen this before](/linux/ssd-trim/).
 
 Someone commented on my Github Gist saying they are seeing the same issues.  Anyone else?  Post in the comments below.
 
 ## Update 2015.06.25
 
-Others are experiencing this problem.  [There is a work around](/hardware/2015/06/25/samsung-840-evo-trim-support-blacklisted-after-firmware-upgrade).
+Others are experiencing this problem.  [There is a work around](/hardware/samsung-840-evo-trim-support-blacklisted-after-firmware-upgrade).
