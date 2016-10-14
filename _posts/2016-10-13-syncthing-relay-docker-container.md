@@ -4,10 +4,10 @@ excerpt: "The easiest way to setup and run a Syncthing Relay using Docker and sy
 category: sharing
 tags: [linux, docker, syncthing, systemd, relay, sharing]
 header:
-  image: https://i.imgur.com/eGEW5JC.png
+  image: https://i.imgur.com/kc3cqYy.jpg
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: http://i.imgur.com/kc3cqYy.jpg
+  overlay_image: https://i.imgur.com/kc3cqYy.jpg
 ---
 
 ## What's a Syncthing Relay?
