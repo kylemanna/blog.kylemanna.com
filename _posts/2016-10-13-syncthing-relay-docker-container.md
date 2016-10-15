@@ -18,6 +18,8 @@ A [Syncthing Relay server](https://docs.syncthing.net/users/strelaysrv.html) hel
 
 If you have a server on the Internet with spare bandwidth (100GB+/mo) and want to host a public relay, then read on!
 
+If you need a server, then checkout [Digital Ocean's $5/mo server using my magical promo code](http://do.co/2dDbq8r) and you'll get a $10 credit to start with.
+
 ## Traditional Methods
 
 The traditional way to hose the Syncthing Relay is to build the binary with a Go compiler and run it locally.  If you're lucky, there is a pre-built binary available or a package for your Linux distribution.  This works fine for most people, but I like to keep services contained as they are easier to update and are somewhat isolated from my primary operating system.
