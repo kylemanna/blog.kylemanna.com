@@ -2,7 +2,7 @@
 title: "Molex PicoBlade vs JST SH Connectors"
 description: ""
 category: hardware
-tags: [hardware, connectors]
+tags: [hardware, connectors, picoblade]
 ---
 
 ## Connector Hunt
@@ -47,3 +47,7 @@ I took some quick pictures of my JST SH <-> Molex PicoBlade adapter.
 [![Connector Image](https://i.imgur.com/4OgHyJ5l.jpg)](https://imgur.com/a/VqOvI)
 
 [Checkout the Imgur image gallery](https://imgur.com/a/VqOvI)
+
+## Update: 2016.10.15
+
+Molex has expanded their offering to now offer [Molex PicoBlade Connector Assemblies](/hardware/molex-picoblade-connector-cable-assemblies/) to further enhance their offering for low volume prototype and production products.
