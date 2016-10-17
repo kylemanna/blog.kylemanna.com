@@ -1,6 +1,6 @@
 ---
 title: "Android AOSP Docker Image for Building Android ROMs"
-tagline: "Android AOSP Docker Image updated for building Android Nougat ROMs and now simpler then ever"
+excerpt: "Android AOSP Docker Image updated for building Android Nougat ROM and now simpler then ever"
 category: android
 tags: [linux, android, nougat, docker, rom]
 ---
@@ -10,6 +10,8 @@ tags: [linux, android, nougat, docker, rom]
 Took some time this weekend to build update my Android AOSP Docker image to build stock Android AOSP Nougat ROM.  No major changes were necessary.  I did update to Ubuntu 16.04 and dropped the external OpenJDK dependencies and use the packages available from the Ubuntu repositories.
 
 The build is now slightly simpler.
+
+Latest source is on [GitHub](https://github.com/kylemanna/docker-aosp) and latest image is on [Docker Hub](https://hub.docker.com/r/kylemanna/aosp/).
 
 ## Test Drive Building Android Nougat ROM
 
