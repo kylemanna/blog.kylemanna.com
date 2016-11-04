@@ -1,6 +1,6 @@
 ---
 title: "KiCad Schematic Label Breaks Netlist and Junction Surprises"
-excerpt: "One poorly placed label and KiCad merges the netlists"
+excerpt: "One poorly placed label and two nets become one with no ERC warnings and a junction surprise."
 category: hardware
 tags: [embedded, hardware, kicad, schematic, pcb]
 header:
@@ -12,9 +12,12 @@ header:
 
 ## KiCad Schematic Gotchas
 
-I've stumbled across two surprising things with KiCad that people should be aware of.  The first is pretty subtle having to do with junctions not being necessary and the second is not obvious **at all**.
+I've stumbled across two surprising things with KiCad that people should be aware of:  
 
-For reference, this was built using KiCad 4.0.4.
+1. The first is pretty subtle having to do with junctions not being consistent and necessary.
+2. The second has to do with label placed where two wires cross over and **assigning the same net to two previously unconnected nets**.
+
+For reference, this occurred on KiCad 4.0.4.
 
 ## KiCad Junctions Aren't Required on Pins
 
@@ -54,7 +57,7 @@ Hidden in the oddl ooks in that both sides of the resistor are connected tot he 
 
 Maybe you don't believe me?  Check the ERC, it passes.  Then check the netlist by looking at the layout.
 
-### The KiCad Board layout
+### The KiCad Board Layout
 
 [![KiCad Board Layout Surprise](http://i.imgur.com/w2g8RsN.png)](http://i.imgur.com/w2g8RsN.png)
 
@@ -66,4 +69,4 @@ On the right, look at the ratsnest wire as well as PCB pad net names and you'll 
 
 Are these bugs?  The junction issue probably isn't, it's just inconsistent.  The label intersection issue probably should be detected by the ERC unless a junction is present.
 
-I'll file a bug and see what happens.  In the mean time, don't do this.
+I'll file a [bug report](https://bugs.launchpad.net/kicad/+bug/1639329) and see what happens.  In the mean time, don't do this.
