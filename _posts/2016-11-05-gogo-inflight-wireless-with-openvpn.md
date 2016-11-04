@@ -10,7 +10,7 @@ header:
   overlay_image: https://i.imgur.com/KyWlOdW.jpg
 ---
 
-tl;dr [I'm Too Lazy to Read, give me the one liner](#im-too-lazy-to-read) at the end.
+**tl;dr [I'm Too Lazy to Read, give me the one liner](#im-too-lazy-to-read)** at the end.
 
 ## Gogo Inflight Internet Show Me How You Work
 
@@ -18,13 +18,13 @@ On a recent flight I was intrigued at how Gogo Inflight WiFi did access control.
 
 ## Initial Investigation
 
-First lets port forward port `3128/tcp` to `22/tcp` on my server and see if I can connected.  Worked.
+During my layover, I forwarded port `3128/tcp` to `22/tcp` on my server to see if I could connected to OpenSSH.  That worked, now I can remotely access the server and continue development.
 
-Next step, fire up a [kylemanna/openvpn](https://github.com/kylemanna/docker-openvpn) server to proxy my data on port `3128/tcp` too.  That works.  Ok, but everyone knows that [tcp in tcp tunnels are bad](http://sites.inka.de/bigred/devel/tcp-tcp.html), and by observing ping times on my flight blow up after a single lost packet, it behaves as expected.  No fun, no good.
+Next step: fire up a [kylemanna/openvpn](https://github.com/kylemanna/docker-openvpn) server to proxy my data on port `3128/tcp`.  That works. However, everyone knows that [TCP in TCP tunnels are bad](http://sites.inka.de/bigred/devel/tcp-tcp.html), and by observing ping times on my flight blow up after a single lost packet, it behaves as poorly as expected.  No fun, no good.
 
 ## Check If the Firewall Relays UDP Traffic
 
-Next step was to setup a better performing solution using TCP in UDP tunneling as tunnels are supposed to work.  To do that I fired up the same [kylemanna/openvpn](https://github.com/kylemanna/docker-openvpn) image on my server with a slightly different config and boom.  Everything worked. My laptop, my cell phone.  The Internet at your fingertips through an apparent firewall hole.
+Now to setup a better performing solution using TCP in UDP tunneling as tunnels are supposed to work.  To do that I fired up the same [kylemanna/openvpn](https://github.com/kylemanna/docker-openvpn) image on my server with a slightly different config and boom.  Everything worked on my laptop and my cell phone.  The Internet at your fingertips through an apparent firewall hole.
 
 But how would others do this?  Read on my friend.
 
@@ -32,13 +32,13 @@ But how would others do this?  Read on my friend.
 
 Before you get on a flight, setup a remote server like a [$5/mo Digital Ocean droplet](http://do.co/2fDHYVv) (Use my [promo code](http://do.co/2fDHYVv) to get a $10 credit!) in a region where you'll be traveling for best performance (i.e. San Francisco vs New York City). 
 
-Step 1 – Start A Server With Docker
+### Step 1 – Start A Server With Docker
 
 I recommend selecting the Docker One-Click App from [Digital Ocean](http://do.co/2fDHYVv).
 
 ![Docker One-Click App on Digital Ocean](http://i.imgur.com/A7tiqCg.png)
 
-Step 2 – Setup the OpenVPN Server Using Docker
+### Step 2 – Setup the OpenVPN Server Using Docker
 
 Change `SERVER_IP` variable to match your server's public IP address.
 
@@ -52,7 +52,7 @@ Note, using the IP address is important in the likely event that DNS is broken u
 
 At this point, you should have a server running in the cloud.
 
-Step 2 – Generate a Client Certificate
+### Step 3 – Generate a Client Certificate
 
 Change `CLIENT` variable if you want more then one client as clients aren't allowed simultaneous connections.
 
@@ -60,13 +60,13 @@ Change `CLIENT` variable if you want more then one client as clients aren't allo
     docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full $CLIENT nopass
     docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient $CLIENT | tee $CLIENT.ovpn
 
-Step 3 – Copy the Client Certificate
+### Step 4 – Copy the Client Certificate
 
 This is up to you. I'd recommend `scp` to copy the `.ovpn` file to your laptop.  You could also try to `cat $CLIENT.ovpn` and copy-paste the certificate, but don't screw it up.
 
-Step 4 – Setup OpenVPN on Your Client
+### Step 5 – Setup OpenVPN on Your Client
 
-This is up to you, but I'll give you a hint at what I've tried:
+This is up to you as well, but I'll give you a hint at what I've tried:
 
 * Linux: Simple as `sudo openvpn --config $CLIENT.ovpn` after installing the `openvpn` package.
 * macOS: [Tunnelblick Project](https://tunnelblick.net/) and import the `$CLIENT.ovpn` package.
@@ -74,13 +74,13 @@ This is up to you, but I'll give you a hint at what I've tried:
 * Android: Check out [OpenVPN Connect App](https://play.google.com/store/apps/details?id=net.openvpn.openvpn) after copying it to your device using MTP file transfer.
 * iOS: Check out [OpenVPN Connect App](https://itunes.apple.com/us/app/openvpn-connect/id590379981?mt=8).  I have not tested this, let me know if it works.
 
-Step 5 – Place an Inflight Phone Call
+### Step 6 – Place an Inflight Phone Call
 
 Well, maybe.  You could do a VOIP phone call or a video chat, but please don't.  Your neighbors will hate you, for good reason.  Surf the web and try to get to [inbox zero](http://lmgtfy.com/?q=inbox+zero).
 
 ## I'm Too Lazy to Read
 
-Well, I have a treat for you. A magic script that you can run as root (trust me! ha) and it'll generate one certificate for you on your disposable [$5/mo Digital Ocean droplet](http://do.co/2fDHYVv) that you can destroy at the end of your flight.
+Well, I have a treat for you. A magic script that you can run as root (trust me! ha) and it'll generate one certificate for you on your disposable [$0.007/hr Digital Ocean droplet](http://do.co/2fDHYVv) that you can destroy at the end of your flight.
 
 Quick and easy via a little [Github Gist](https://gist.github.com/3adcd465e709b8ff3300202f12fdfff1):
 
@@ -149,7 +149,7 @@ Approximate expected output:
 	 ---------------------------------------
 			\   ^__^
 			 \  (oo)\_______
-				(__)\       )\/
+				(__)\       )\/ 
 					||----w |
 					||     ||
 	[?] Copy client1.ovpn to your client
