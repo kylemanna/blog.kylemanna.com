@@ -14,19 +14,19 @@ header:
 
 ## Gogo Inflight Internet Show Me How You Work
 
-On a recent flight I was intrigued at how Gogo Inflight WiFi did access control.  At initial glance it appears that everything is firewalled except a few ports.  I determined this by connecting to their WiFi access point on a flight and port scanning a server I had setup.  All ports except `80/tcp` and `3128/tcp` appear blocked.
+On a recent flight I decided to learn a bit how Gogo Inflight Internet WiFi does access control.  By connecting to the access point you're directed to a captive portal requesting payment and it seems unable to access the Internet otherwise.  A quick port scan of my remote server show that all ports except `80/tcp` and `3128/tcp` appear blocked.
 
-## Initial Investigation
+During my layover, I forwarded port `3128/tcp` to `22/tcp` on my server to see if I could connect to OpenSSH.  Surprisingly it worked, and this little hole enabled me to remotely access the server and continue exploration.
 
-During my layover, I forwarded port `3128/tcp` to `22/tcp` on my server to see if I could connected to OpenSSH.  That worked, now I can remotely access the server and continue development.
+The next was to fire up a [kylemanna/openvpn](https://github.com/kylemanna/docker-openvpn) server to proxy my data on port `3128/tcp`.  That worked as well.  However, everyone knows that [TCP in TCP tunnels are bad](http://sites.inka.de/bigred/devel/tcp-tcp.html), and by observing ping times on my flight blow up after a single lost packet, it behaves as poorly as expected.  No fun, no good, but surely a start.
 
-Next step: fire up a [kylemanna/openvpn](https://github.com/kylemanna/docker-openvpn) server to proxy my data on port `3128/tcp`.  That works. However, everyone knows that [TCP in TCP tunnels are bad](http://sites.inka.de/bigred/devel/tcp-tcp.html), and by observing ping times on my flight blow up after a single lost packet, it behaves as poorly as expected.  No fun, no good.
 
 ## Check If the Firewall Relays UDP Traffic
 
-Now to setup a better performing solution using TCP in UDP tunneling as tunnels are supposed to work.  To do that I fired up the same [kylemanna/openvpn](https://github.com/kylemanna/docker-openvpn) image on my server with a slightly different config and boom.  Everything worked on my laptop and my cell phone.  The Internet at your fingertips through an apparent firewall hole.
+A better performing solution uses TCP in UDP tunneling as tunnels are supposed to work.  To do that I fired up the same [kylemanna/openvpn](https://github.com/kylemanna/docker-openvpn) image on my server with a slightly different configuration.  Boom!  Everything worked on my laptop and my cell phone through the OpenVPN tunnel.  The Internet at your fingertips through an apparent firewall hole.
 
 But how would others do this?  Read on my friend.
+
 
 ## How to Setup OpenVPN on Port 3128/UDP
 
@@ -77,6 +77,7 @@ This is up to you as well, but I'll give you a hint at what I've tried:
 ### Step 6 – Place an Inflight Phone Call
 
 Well, maybe.  You could do a VOIP phone call or a video chat, but please don't.  Your neighbors will hate you, for good reason.  Surf the web and try to get to [inbox zero](http://lmgtfy.com/?q=inbox+zero).
+
 
 ## I'm Too Lazy to Read
 
@@ -157,4 +158,4 @@ Approximate expected output:
 	root@docker-512mb-sfo1-01:~# ls -l client1.ovpn
 	-rw-r--r-- 1 root root 4869 Nov  4 22:50 client1.ovpn
 
-Have Fun.
+Have Fun.  And as always, don't be stupid with this new found capability.
