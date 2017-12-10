@@ -138,7 +138,7 @@ This will expose the ssh server in the pfSense instance to the Internet.  Ensure
 
 Create the firewall rule and give it some time to propagate to the cloud firewalls.
 
-## Step 10 - Complete the WebUI Wizard using SSH port forwarding
+## Step 12 - Complete the WebUI Wizard using SSH port forwarding
 
 Setup port forwarding and open a ssh session. Default username is **admin** and default password is **pfsense**.
 
@@ -150,7 +150,7 @@ Accept the security exception, and complete the install wizard.  Make sure the *
 
 When the installer concludes it will re-enable the firewall, you may need to run `pfctl -d` again from the serial console.
 
-## Step 11 - Reconnect to the WebUI and Finish
+## Step 13 - Reconnect to the WebUI and Finish
 
 ### Enable and Configure sshd on WAN Interface
 
