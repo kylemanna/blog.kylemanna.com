@@ -56,6 +56,16 @@ Screenshots of BLE info:
 ![BLE Screen #2](https://i.imgur.com/ntwbN2h.png)
 ![BLE Screen #3](https://i.imgur.com/ykxaDlG.png)
 
+## Certification
+
+I could't find any FCC ID markings on the device. Also couldn't find them "CooSpo" [listed in the ANT directory](https://www.thisisant.com/directory). This seemed odd.
+
+A representative at the company quickly replied when contacted via the email address on their website saying that the FCC ID is under their contract manufacturer's name "Shenzhen Fitcare Electronics Co., Ltd".  I was able to find a [document](https://fccid.io/2ACN7-HRM803S/Test-Report/Test-Report-DTS-4061228.pdf) mentioning the "HRM808S" as an additional model of the "HRM803S" which has FCC ID `2ACN7-HRM803S`.  Looks like it passed the certification process without issue.
+
+Digging deeper, there is a "Fitcare Electronics" listing in the ANT directory, but not this model. The CooSpo representative said that ANT is slow to update their directory, so maybe it will show up there soon enough?
+
+The CooSpo HRM808S device looks very similar to the ["HRM812" on Fitcare's website](http://www.fitcare.cn/product/detail/36.html).
+
 ### Outstanding Questions
 
 What's the actual model of this product? There's no product / model number on the [Amazon Product Page](https://amzn.to/2XWHXBP) and there's nothing on [CooSpo's own website](http://www.coospo.com/) at the time of writing (July 2019).  Searching Google for "HRM808S" or "H808" yields nothing.  This is a ghost product that works amazingly well.
