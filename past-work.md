@@ -8,6 +8,10 @@ excerpt: "Past projects I've worked on"
 
 Past projects have used the following processors and EVMs:
 
+* Xilinx Zynq 7000 series
+  * AVnet PicoZED Reference Platform
+  * Custom boards
+
 * OMAP4430/OMAP4470
   * TI's Blaze Tablet Platform
   * Custom boards
@@ -55,7 +59,7 @@ Past projects have used the following processors and EVMs:
 * Microcontrollers interfaced with accelerometers
 * FPGA interface to ARM9 microprocessor running embedded Linux
 
-## Linux and System Administratio
+## Linux and System Administration
 
 ### Gentoo Linux Forums Founder
 
