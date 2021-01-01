@@ -1,0 +1,4 @@
+/caddy
+/_site
+/.vendor
+/.bundle
