@@ -1,3 +1,2 @@
-:80 {
-    file_server
-}
+:80
+file_server

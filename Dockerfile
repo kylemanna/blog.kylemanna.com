@@ -1,6 +1,6 @@
 FROM ruby:2.7 as builder
 
-# throw errors if Gemfile has been modified since Gemfile.lock
+# Throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
 WORKDIR /usr/src/app
@@ -8,8 +8,7 @@ WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
-COPY . .
-
+COPY . ./
 RUN rake build
 
 FROM caddy:2

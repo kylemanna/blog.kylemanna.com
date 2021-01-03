@@ -5,10 +5,10 @@ services:
     build: .
     restart: unless-stopped
     ports:
-      - "80:80"
-      #- "443:443"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - "8080:80"
+    #volumes:
+      #- ./Caddyfile:/etc/caddy/Caddyfile:ro
       #- ./_site:/srv:ro
-      - ./caddy/data:/data
-      - ./caddy/config:/config
+      #- ./caddy/config:/config
+      #- ./caddy/data:/data
+    #command: caddy run --config /etc/caddy/Caddyfile --watch

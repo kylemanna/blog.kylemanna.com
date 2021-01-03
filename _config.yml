@@ -139,6 +139,9 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - Caddyfile
+  - Dockerfile
+  - docker-compose.y?ml
 keep_files:
   - .git
   - .svn

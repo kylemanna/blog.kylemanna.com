@@ -2,3 +2,5 @@
 /_site
 /.vendor
 /.bundle
+/Dockerfile
+/docker-compose.yaml
