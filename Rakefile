@@ -5,7 +5,7 @@ task :default => :preview
 
 desc "Launch preview environment"
 task :preview do
-  sh "bundle exec jekyll serve --watch --incremental --config _config.yml,_config.dev.yml"
+  sh "bundle exec jekyll serve --watch --incremental --config _config.yml"
 end # task :preview
  
 desc 'Build site with Jekyll'
