@@ -1,2 +1,40 @@
 :80
 file_server
+
+# Old permalinks missing categories
+redir /2013/07/07/dying-gigabyte-motherboard  /hardware/dying-gigabyte-motherboard/ permanent
+redir /2013/07/07/dying-gigabyte-motherboard/ /hardware/dying-gigabyte-motherboard/ permanent
+redir /2013/07/14/fssh-part-2-tmux-and-vim  /cli/fssh-part-2-tmux-and-vim/ permanent
+redir /2013/07/14/fssh-part-2-tmux-and-vim/ /cli/fssh-part-2-tmux-and-vim/ permanent
+redir /2014/04/21/two-factor-2fa-ssh-authentication-using-yubikey  /security/two-factor-2fa-ssh-authentication-using-yubikey/ permanent
+redir /2014/04/21/two-factor-2fa-ssh-authentication-using-yubikey/ /security/two-factor-2fa-ssh-authentication-using-yubikey/ permanent
+redir /2014/12/12/gpg-breakage-on-v21  /linux/gpg-breakage-on-v21/ permanent
+redir /2014/12/12/gpg-breakage-on-v21/ /linux/gpg-breakage-on-v21/ permanent
+redir /2015/10/01/rest-in-pieces-lg-optimus-g-aka-e970  /mobile/rest-in-pieces-lg-optimus-g-aka-e970/ permanent
+redir /2015/10/01/rest-in-pieces-lg-optimus-g-aka-e970/ /mobile/rest-in-pieces-lg-optimus-g-aka-e970/ permanent
+
+# Fix old duplicate dashes
+redir /hardware/2015/05/02/samsung-840-evo-ssd--linux--firwmare-update  /hardware/samsung-840-evo-ssd-linux-firwmare-update/ permanent
+redir /hardware/2015/05/02/samsung-840-evo-ssd--linux--firwmare-update/ /hardware/samsung-840-evo-ssd-linux-firwmare-update/ permanent
+redir /linux/2014/04/24/ubuntu-1404-lts-on-openvz--ufw-and-iptables-firewall  /linux/ubuntu-1404-lts-on-openvz-ufw-and-iptables-firewall/ permanent
+redir /linux/2014/04/24/ubuntu-1404-lts-on-openvz--ufw-and-iptables-firewall/ /linux/ubuntu-1404-lts-on-openvz-ufw-and-iptables-firewall/ permanent
+redir /linux/2014/07/28/disk-caching-kernel-tree-benchmarks-using-dm-cache--lvmcache  /linux/disk-caching-kernel-tree-benchmarks-using-dm-cache-lvmcache/ permanent
+redir /linux/2014/07/28/disk-caching-kernel-tree-benchmarks-using-dm-cache--lvmcache/ /linux/disk-caching-kernel-tree-benchmarks-using-dm-cache-lvmcache/ permanent
+redir /linux/2014/08/19/linux--radeon-hd-4200--reduced-blanking  /linux/linux-radeon-hd-4200-reduced-blanking/ permanent
+redir /linux/2014/08/19/linux--radeon-hd-4200--reduced-blanking/ /linux/linux-radeon-hd-4200-reduced-blanking/ permanent
+redir /linux/2015/07/11/docker--systemd-network-surprise  /linux/docker-systemd-network-surprise/ permanent
+redir /linux/2015/07/11/docker--systemd-network-surprise/ /linux/docker-systemd-network-surprise/ permanent
+# TODO would be nice to redirect instead of re-writing using:
+# uri replace -- -
+
+# Old permalinks
+@old_permalink {
+    path_regexp permalink ^/([^/]+)/(\d{4})/(\d{2})/(\d{2})/([^/]+)/*$
+}
+redir @old_permalink /{re.permalink.1}/{re.permalink.5}/
+
+# Old utilities
+redir /rss.xml /feed.xml permanent
+redir /atom.xml /feed.xml permanent
+redir /sitemap.txt /sitemap.xml permanent
+redir /tags.html /tags/ permanent
