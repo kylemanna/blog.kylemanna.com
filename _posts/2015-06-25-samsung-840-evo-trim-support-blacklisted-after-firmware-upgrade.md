@@ -7,7 +7,7 @@ tags: [linux, samsung, ssd, firmware, update, error, disk, performance]
 
 ## Firmware Upgrade Gone Wrong
 
-A while back I did a firmware upgrade on my Samsung 840 EVO SSD because of potential performance problems with the TLC NAND.  I waited for the second release of the firmware and then bit the bullet and went on the Linux upgrade adventure.  The adventure didn't work out so well as I was hit with performance new problems after.  Annoyed, I scribbled up this [blog post](/hardware/2015/05/02/samsung-840-evo-ssd--linux--firwmare-update/) about that.
+A while back I did a firmware upgrade on my Samsung 840 EVO SSD because of potential performance problems with the TLC NAND.  I waited for the second release of the firmware and then bit the bullet and went on the Linux upgrade adventure.  The adventure didn't work out so well as I was hit with performance new problems after.  Annoyed, I scribbled up this [blog post](/hardware/samsung-840-evo-ssd--linux--firmware-update/) about that.
 
 Someone posted a comment on my earlier blog post and I did some more digging and found that I'm not alone.  Ahhh, so I'm not imaging things.
 
