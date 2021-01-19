@@ -10,6 +10,12 @@ header:
   overlay_image: https://i.imgur.com/HumrTzf.jpg
 ---
 
+## Update January 2021:
+
+**Do not buy this and definitely don't modify it as originally described below. It's dangerous as it appears the circuit is wired backwards with USB ground referenced to the AC Hot Line.**
+
+Read the update here: [Danger: AVJONE NC318 WiFi Smart Outlet is an Electrocution and Fire Hazard](/hardware/avjone-nc318-wifi-smart-outlet-power-plug-danger-electrocution-and-fire-hazard/)
+
 ## Highlights
 
 [AVJONE NC318 Smart WiFi
