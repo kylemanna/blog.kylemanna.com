@@ -24,6 +24,22 @@ If you're lucky, it will only destroy inanimate objects on the path to ground wh
 properly designed device. This happened to me. Read below for the story.
 
 
+## Update 2021-01-31
+
+A few weeks after posting this I was contacted by Willi Hilgers from Germany who had seen this post and
+measured his version of the outlet to confirm the same problem!
+
+See photo of the German version from Willi Hilgers below:
+
+![Photo of similar outlet showing 230VAC on USB shielding!](https://i.imgur.com/OqLEFRe.jpg)
+
+This confirms my suspicions and dismisses my concerns that my modification caused this issue.
+Thanks for sharing!  I can rest better knowing I didn't directly cause this safety hazard, but still am
+disappointed I didn't measure this out of the box. Live and learn.
+
+Original post follow.
+
+
 ## Perhaps I Caused This?
 
 In an [earlier post](/hardware/avjone-nc318-wifi-smart-outlet-power-plug-with-tasmota-and-usb-power/) I
