@@ -43,7 +43,7 @@ Nice to haves:
 
 ## Winner: FriendlyElec NanoPi R5S
 
-One of the most compelling features ot he NanoPi R5S is that it's easy to buy from many vendors (I ordered from Amazon.com) and comes with an enclosure.  Once you receive it's ready to go as a router with no other messing around.
+One of the most compelling features of the NanoPi R5S is that it's easy to buy from many vendors (I ordered from Amazon.com) and comes with an enclosure.  Once you receive it's ready to go as a router with no other messing around.
 
 ![NanoPI R5S internals](https://i.imgur.com/G35TLkD.jpg)
 
