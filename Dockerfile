@@ -1,4 +1,4 @@
-FROM ruby:2.7 as builder
+FROM ruby:2.7 AS builder
 
 # Throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
