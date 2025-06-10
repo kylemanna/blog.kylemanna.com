@@ -2,7 +2,7 @@
 title: "FriendlyElec NanoPi R5S as PTP Grandmaster Clock with GNSS/GPS Discipline"
 excerpt: "Cheap, ubiquitous, and feature rich RK3568 SBC with PTP and PPS hardware support"
 category: hardware
-tags: [ptp, linux, gps, gnss, rk3568, ieee1588, pps, nt]
+tags: [ptp, linux, gps, gnss, rk3568, ieee1588, pps, ntp]
 header:
   image: https://i.imgur.com/4YsasKd.jpg
   overlay_color: "#000"
